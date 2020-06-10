@@ -1,0 +1,666 @@
+﻿Format:
+ [Head, Body, Hands, Legs]
+ 
+Pieces that aren't part of a set have stronger effects, due to their 'unique' status.
+
+#----------------------------
+# Ultra Heavy (60 - 70)
+#----------------------------
+# Havel's Set
+- Vigor: [1, 2, 1, 2]
+
+# Golem Set
+- Max Stamina: [1.02, 1.024, 1.006, 1.018]
+
+# Giant's Set
+- Strength: [1, 2, 1, 2]
+
+# Pursuer's Set
+- Anti-Hollow: [1.02, 1.024, 1.006, 1.018]
+
+# Smough's Set
+- HP Absorb on Kill: [24, 48, 12, 36]
+
+# Gundyr Set
+- Weapon Stamina Consumption: [0.98, 0.976, 0.994, 0.982]
+
+# Brushwood Set
+- Strength: [1, 2, 1, 2]
+
+# Winged Knight Set 
+- Faith: [1, 2, 1, 2]
+
+# Millwood Knight Set
+- Vigor: [1, 2, 1, 2]
+
+# Mirror Knight Set
+- Faith: [1, 2, 1, 2]
+
+# Dragonrider Set
+- Strength: [1, 2, 1, 2]
+
+# Catarina Set
+- Deflection: [6, 12, 3, 9]
+
+# Stone Set
+- Strength: [1, 2, 1, 2]
+
+# Guardian Set
+- Vigor: [1, 2, 1, 2]
+
+# Steel Set
+- Max HP: [1.02, 1.024, 1.006, 1.018]
+
+# Cathedral Knight Set
+- Miracle Cost: [0.98, 0.96, 0.99, 0.97]
+
+# Drakekeeper Set
+- Stamina Damage: [1.06, 1.12, 1.03, 1.09]
+
+# Black Iron Set
+- Vitality: [1, 2, 1, 2]
+
+# Iron Dragonslayer Set
+- Skill FP Cost: [0.98, 0.96, 0.99, 0.97]
+
+# Lapp's Set
+- Luck: [1, 2, 1, 2]
+
+# Penetrator Set
+- Max Stamina: [1.02, 1.024, 1.006, 1.018]
+
+# Morne's Set
+- Miracle Cost: [0.98, 0.96, 0.99, 0.97]
+
+# Paladin Set
+- Faith: [1, 2, 1, 2]
+
+# Quicksilver Set
+- Max FP: [1.02, 1.024, 1.006, 1.018]
+
+# Executioner Set
+- FP Absorb on Kill: [1%, 2%, 1%, 1%]
+
+# Dragonslayer Set
+- Faith: [1, 2, 1, 2]
+
+# Lothric Knight Armor Set
+- Dexterity: [1, 2, 1, 2]
+
+# Iron Keeper Helm
+- Headshot Damage %: [0]
+
+# Heide Mask
+- Skill FP Cost: [0.98]
+
+#----------------------------
+# Heavy (50 - 60)
+#----------------------------
+# Harald Legion Set
+- Strength: [1, 2, 1, 2]
+
+# Exile Armor Set
+- Weapon Stamina Consumption: [0.98, 0.976, 0.994, 0.982]
+
+# Black Knight Set
+- Anti-Demon: [1.02, 1.024, 1.006, 1.018]
+
+# Silver Knight Set
+- Stamina Recovery: [1, 2, 1, 2]
+
+# Silver Stag Helm
+- Strength: [2]
+
+# Heide Knight Set
+- Skill FP Cost: [0.98, 0.96, 0.99, 0.97]
+
+# Syan Knight Set
+- Vigor: [1, 2, 1, 2]
+
+# Gloom Set
+- Endurance: [1, 2, 2]
+- Frost Inflict: [50]
+
+# Ruin Set
+- Endurance: [1, 2, 1, 2]
+
+# Rampart Golem
+- Strength: [1, 2, 2]
+- Frost Inflict: [50]
+
+# Gargoyle Helm
+- Equip Load: [1.05]
+
+# Gargoyle Skull
+- Stamina Damage: [1.1]
+
+# Crab Helmet
+- Boosts Stats by 40 below 25% HP
+
+# Imperial Samurai Helm
+- Dexterity: [3]
+
+# Horned Samurai Helm
+- Strength: [3]
+
+# Ornate Samurai Helm
+- Weapon Stamina Consumption: [0.95]
+
+# Lorian's Set
+- HP Regen: [1, 2, 1, 2]
+
+# Great Lord Set
+- Miracle Cost: [0.98, 0.96, 0.99, 0.97]
+
+# Ludleth's Crown
+- Soul Absorption: [1.25]
+
+# Symbol of Avarice
+- Item Discovery: [2.5]
+- HP Loss %: [1]
+
+# Giant Slave Helmet
+- Soul Absorption: [1.05]
+
+# Old Demon King's Crown
+- Stamina Recovery: [5]
+
+# Pygmy Crown
+- Attunement: [5]
+
+#----------------------------
+# Medium 1 (30 - 40)
+#----------------------------
+# Drakeblood Set
+- Stamina Damage: [1.08, 1.16, 1.04, 1.12]
+
+# Gough's Set
+- Bow Distance: 50 [10, 20, 5, 15]
+
+# Mad Warrior Set
+- Skill FP Cost: [0.98, 0.96, 0.99, 0.97]
+
+# Imperious Set
+- Max HP: [1.016, 1.032, 1.008, 1.024]
+
+# Vengarl's Set
+- Weapon Stamina Consumption: 8 [0.984, 0.968, 0.992, 0.976]
+
+# Mask of Sin
+- Soul absorption: [1.05]
+
+# Pot
+- HP Estus Restore: [1.05]
+
+# Black Dragon Set
+- Strength: [2, 3, 1, 2]
+- [Legs] Fire Damage on Kick: 100
+
+# Ringed Knight Set
+- Anti-Abyssal: [1.016, 1.032, 1.008, 1.024]
+
+# Ivory King Set
+- Anti-Demon: [1.016, 1.032, 1.008, 1.024]
+
+# Yhorm's Set
+- Vigor: [2, 3, 1, 2]
+
+# Smelter Demon Set
+- Pyromancy Cost: [0.97, 0.94, 0.985, 0.955]
+
+# Firelink Set
+- Soul Absorption: [1.03, 1.06, 1.015, 1.045]
+
+# Gold Ardeo
+- HP Absorb on Kill: [32]
+
+# Iron Cage
+- FP Absorb on Kill: [1%]
+
+# Corvian Knight Helmet
+- Vigor: [2]
+
+# Eastern Armor Set
+- Weapon Stamina Consumption: [0.984, 0.968, 0.992, 0.976]
+
+# Alonne Set
+- Dexterity: [2, 3, 1, 2]
+
+# Brass Set
+- Effect Duration: [1.08, 1.16, 1.04, 1.12]
+
+# Charred Loyce Set
+- Max HP: [1.016, 1.032, 1.008, 1.024]
+
+# Loyce
+- Max FP: [1.016, 1.032, 1.008, 1.024]
+
+# Armor of Favor Set
+- Soul Absorption: [1.03, 1.06, 1.015, 1.045]
+
+# Lord's Blade Set
+- Dexterity: [2, 3, 1, 2]
+
+# Sunset Set
+- Endurance: [2, 3, 1, 2]
+
+# Bloodstained Gauntlets
+- HP Absorb on Kill: [12]
+
+# Wolf Knight Set
+- Stamina Recovery: [2, 3, 1, 2]
+
+# Ancient King Set
+- Vigor: [2, 3, 2]
+- Curse Inflict: [30]
+
+# Crown of Filianore
+- HP Regen: [2]
+
+# Crown of the Holy King
+- Faith: [3]
+
+#----------------------------
+# Medium 2 (20 - 30)
+#----------------------------
+# Elite Knight Set
+- HP Estus Restore: [1.03, 1.06, 1.015, 1.045]
+
+# Burial Knight Set
+- Vigor: [2, 3, 1, 2]
+
+# Knight Set
+- Stamina Damage: [1.08, 1.16, 1.04, 1.12]
+
+# Armor of Thorns Set
+- Roll Damage: [20, 40, 10, 30]
+
+# Nameless Knight Set
+- Item Discovery: [1.08, 1.16, 1.04, 1.12]
+
+# Mask of the Father
+- Equip Load: [5]
+
+# Mask of the Mother
+- Max HP: [5]
+
+# Mask of the Child
+- Stamina Recovery: [10]
+
+# Demon Cleric Mask
+- Cast Speed: [10]
+
+# Mask of Horror
+- Anti-Undead: [1.05]
+
+# Mask of Cruelty
+- Stamina Damage: [1.1]
+
+# Mask of Serenity
+- Max FP: [1.05]
+
+# Mask of War
+- Stamina Recovery: [5]
+
+# Faraam Armor Set
+- Stamina Recovery: [2, 3, 1, 2]
+
+# Alva Set
+- Luck: [2, 3, 1, 2]
+
+# Footman Set
+- Strength: [2, 3, 1, 2]
+- [Body] Effect: reduces backstab damage by 90%
+
+# Outrider Knight Armor Set
+- Endurance: [2, 3, 2]
+- Frost Inflict: [50]
+
+# Dark Set
+- Vigor: [2, 3, 2]
+- Curse Inflict: [30]
+
+# Skull Mask
+- Vigor: [2]
+
+# Undead Legion Set
+- Anti-Abyssal: [1.016, 1.032, 1.008, 1.024]
+
+# Mirrah Chain Set
+- Max Stamina: [1.016, 1.032, 1.008, 1.024]
+
+# Herald Set
+- Faith: [2, 3, 1, 2]
+
+# Fallen Knight Set
+- Anti-Demon: [1.016, 1.032, 1.008, 1.024]
+
+# Hallowed Knight Set
+- Anti-Undead: [1.016, 1.032, 1.008, 1.024]
+
+# Forlorn Set
+- Endurance: [2, 3, 2]
+- Curse Inflict: [30]
+
+# Aurous Set
+- Max Equip Load: 8 [1.016, 1.032, 1.008, 1.024]
+
+# Armor of the Sun Set
+- HP Estus Restore: [1.03, 1.06, 1.015, 1.045]
+
+# Fire Witch Set
+- Max FP: [1.016, 1.032, 1.008, 1.024]
+
+# Channeler
+- Sorcery FP Cost: 15 [1.03, 1.06, 1.015, 1.045]
+
+# Chain Armor Set
+- Vitality: [2, 3, 1, 2]
+
+# Vilhelm's Set
+- Anti-Hollow: [1.016, 1.032, 1.008, 1.024]
+
+# Bone Ash Set
+- HP Estus Restore: [1.03, 1.06, 1.015, 1.045]
+
+# Varangian Set
+- Dexterity: [2, 3, 1, 2]
+
+# Wolnir's Crown
+- STR/DEX/INT/FTH: [1]
+
+# Crown of the Fallen
+- Intelligence: [3]
+
+# Northern Set
+- Max Stamina: [1.016, 1.032, 1.008, 1.024]
+
+# Slave Knight Set
+- Weapon Stamina Consumption: [1.016, 1.032, 1.008, 1.024]
+
+#----------------------------
+# Light (10 - 20)
+#----------------------------
+# Nameless King Set
+- Miracle Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Courtier Set
+- Soul absorption: [1.04, 1.08, 1.02, 1.06]
+
+# Follower Set
+- Endurance: [2, 4, 1, 3]
+
+# Royal Soldier Set
+- Weapon Stamina Consumption: [0.98, 0.96, 0.99, 0.97]
+
+# Pontiff Knight Set
+- Intelligence: [2, 4, 1, 3]
+
+# Pontiff's Set
+- FP Absorb on Kill: [1%, 1%]
+
+# Dancer Set
+- Weapon Stamina Consumption: [0.98, 0.96, 0.99, 0.97]
+
+# Frigid Valley Mask
+- Attunement: [2]
+
+# Evangelist Set
+- Faith: [2, 4, 1, 3]
+
+# Mirrah Set
+- Vigor: [2, 4, 1, 3]
+
+# Hard Leather Set
+- Vitality: [2, 4, 1, 3]
+
+# Jailer Set
+- Soul Absorption: [1.04, 1.08, 1.02, 1.06]
+
+# Black Set
+- Max FP: [1.02, 1.04, 1.01, 1.03]
+
+# Sellsword Set
+- Dexterity: [2, 4, 1, 3]
+
+# Vileblood Set
+- HP Absorb on Kill: [30, 60, 15, 45]
+
+# Sunless Set
+- Max FP: [1.02, 1.04, 1.01, 1.03]
+
+# Leonhard's Set
+- Intelligence: [2, 4, 1, 3]
+
+# Xanthous Set
+- FP Absorb on Kill: [1%, 2%, 1%, 1%]
+
+# White Preacher Head
+- Attunement: [2]
+
+# Poisonhorn Cap
+- Vigor: [3]
+
+# Hollow Head
+- Vitality: [3]
+
+# Basilisk Cap
+- Luck: [3]
+
+# Vagabond Cowl
+- Faith: [3]
+
+# Raven Mask
+- Intelligence: [2]
+
+# Deserter Set
+- Item Discovery: [1.1, 1.2, 1.15]
+
+# Deserter Helm
+- Item Discovery: [1.1]
+
+# Soldier's Hood
+- Item Discovery: [1.1]
+
+# Black Leather Set
+- Luck: [2, 4, 1, 3]
+
+# Brigand Set
+- Skill FP Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Leather Set
+- Bow Distance: [10, 20, 5, 15]
+
+# Shira's Set
+- Attunement: [2, 4, 1, 3]
+
+# Black Hand Set
+- Dexterity: [2, 4]
+
+# Conjurator Set
+- Pyromancy Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Jester's Set
+- Head: Item Discovery [1.1]
+- Body: Luck [5]
+- Hands: Soul Absorption: [1.025]
+- Legs: Immunity to non-fatal fall damage
+
+# Grotto Set
+- Intelligence: [2, 4, 3]
+- Poison Inflict: [50]
+
+# Black Straw Hat
+- Skill FP Cost: [1.05]
+
+# Tan Straw Hat
+- Skill FP Cost: [1.05]
+
+# Cleric Set
+- HP Estus Restore: [1.04, 1.08, 1.02, 1.06]
+
+# Black Cleric Set
+- FP Estus Restore: [1.04, 1.08, 1.02, 1.06]
+
+# Astrologist
+- Miracle FP Cost: 20 [1.04, 1.08, 1.02, 1.06]
+
+# Worker Set
+- Luck: [2, 4, 1, 3]
+
+# Chester's Set
+- Head: Critical Hit (separate chance with Ring of Punishment)
+- Body: Sound Reduction [0.8]
+- Hands: Luck [1]
+- Legs: Bow Distance [15]
+
+# Binded Set
+- Anti-Hollow: [1.02, 1.04, 1.01, 1.03]
+
+# Thrall Hood
+- Luck: [3]
+
+# Assassin Set
+- Stamina Recovery: [2, 4, 1, 3]
+
+# Painting Guardian Set
+- Skill FP Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Drang Set
+- Stamina Recovery: [4, 1, 3]
+
+# Serpentine Set
+- Attunement: [2, 4]
+
+# Scholar Set
+- Max FP: [1.02, 1.04]
+
+#----------------------------
+# Ultra Light (0 - 10)
+#----------------------------
+# Pyromancer Set
+- Pyromancy Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Dragon Acolyte Set
+- Max FP: 10 [1.02, 1.04, 1.01, 1.03]
+
+# Karla's Set
+- Max FP: [1.02, 1.04, 1.01, 1.03]
+
+# Black Witch Set
+- Max FP: [1.02, 1.04, 1.01, 1.03]
+
+# Black Witch Veil
+- Max FP: [1.02]
+
+# Sorcerer Set
+- Intelligence: [2, 4, 1, 3]
+
+# Court Sorcerer Set
+- Sorcery Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Old Sorcerer Set
+- Cast Speed: 30 [6, 12, 3, 9]
+
+# Venerable Sage's Set
+- FP Absorb on Kill: [1%, 2%, 1%, 1%]
+
+# Clandestine Coat
+- Reduces falling damage and reduces enemy detection via sound: [25]
+
+# Wanderer's Coat
+- Endurance: [4]
+
+# Sage's Big Hat
+- Max FP: [1.1]
+
+# Gwyndolin Moonlight Set
+- Sorcery Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Gold-hemmed Black Set
+- Pyromancy Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Crimson Set
+- HP Regen: 10 [2, 4, 1, 3]
+
+# Pale Shade Set
+- Anti-Hollow: [1.02, 1.04, 1.01, 1.03]
+
+# Shadow Set
+- Reduces enemy detection via sight and sound: [20, 40, 10, 30]
+
+# Maiden Set
+- Miracle Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Hexer Set
+- Cast Speed: 30 [6, 12, 3, 9]
+
+# Cornyx's Set
+- Pyromancy Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Grave Warden Set
+- Dexterity: [2, 4, 3]
+- Bleed Inflict: [30]
+
+# Ordained Set
+- Intelligence: [2, 4, 3]
+
+# Desert Pyromancer Set
+- Pyromancy Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Manikin Set
+- Dexterity: [2, 4, 1, 3]
+
+# Crude Manikin Mask
+- Dexterity: [2]
+
+# Archdeacon Set
+- Faith: [2, 4, 3]
+
+# Prayer Set
+- HP Regen: [2, 4, 3]
+
+# Fire Keeper Set
+- Soul Absorption: [1.04, 1.08, 1.02, 1.06]
+
+# Blindfold Mask
+- Sorcery/Pyromancy/Miracle Cost: [0.98]
+
+# Carthus Blindfold
+- Dexterity: [3]
+
+# Antiquated Set
+- Sorcery Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Antiquated Plain Set
+- Sorcery Cost: [0.96, 0.92, 0.98, 0.94]
+
+# Master's Set
+- Weapon Stamina Consumption: [0.98, 0.96, 0.99, 0.97]
+
+# Deacon Set
+- Attunement: [4, 3]
+
+# Saint Set
+- HP Regen: [2, 4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+﻿#------------------------------
+# Item ID ranges
+#------------------------------
+# Proper
+# Map - Enemies: xxx0000
+# Map - Players: xxx0900
+# Map - Object: xxx1000
+# Map - MSBRegions: xxx2000
+# Map - MSBEvents: xxA10000
+# Map - Collision: xxx4000
+# Map - Chest ObjAct: xxx4300
+
+# These need to be used for new treasures in each area
+54002061 Cemetery of Ash / Unturned Graves
+53002100 High Wall of Lothric / Consumed King's Garden
+53102092 Undead Settlement
+53302180 Road of Sacrifices / Farron Keep
+53502082 Cathedral of the Deep
+53802175 Catacombs of Carthus / Smouldering Lake
+53702146 Irithyll of the Boreal Valley / Anor Londo
+53902120 Irithyll Dungeon / Profaned Capital
+53012090 Lothric Castle
+53412134 Grand Archives
+54102011 Kiln of the First Flame
+53202075 Archdragon Peak
+54502074 Painted World of Ariandel
+55002062 Dreg Heap
+55102058 The Ringed City
+
+#------------------------------
+# Changelog
+#------------------------------
+
+#------------------------------
+# Plan
+#------------------------------
+- Random starting location
+- No central hub, rather each area will have a hub-like area, probably a bonfire that provides leveling and attunement.
+- No warping (other than in-map warps for shortcuts).
+- World is balanced so it is essentially equal, the tough areas will be a little bit tougher but not massive like the jump normally is.
+- No weapon customization at all, if you pick up a weapon it is ready. Rather all power gain is via leveling or other effects from items.
+- Randomisation of some aspects like enemies, merchants, etc.
+- Each boss will drop something that you'll need to face Soul of Cinder. This replaces the Lords of Cinder, and forces you to face every boss. All the bosses will be at a equal stat power level (obviously mechanics will still make some easier than others).
+- For spells, I'm thinking about a strictly cooldown system, so a spell will block you from casting for X seconds. The lowest spells won't have any cooldown. Basically FP will be removed.
+- Estus, probably change to grass type system instead, so you need to find the healing stuff via killing enemies.
+- Covenant slot: difficulty selection (increase enemy difficulty, gain more souls/item discovery)
+
+# TODO
+- Remove all unessential NPCs and enable NG+/COA enemies (or remove).
+- Place central bonfires for each map, disable all others
+ - Setup the bonfire talks
+- Collate player points/spawnpoints for the random start placement
+- Adjust weapon scaling for new design
+
+# FIX
+- Sort out the player respawn behavior (appears to be a specific spawnpoint for each map when homeward, dead may be the bonfire one).
