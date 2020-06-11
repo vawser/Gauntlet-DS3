@@ -6760,22 +6760,77 @@ Event(20091000, Default, function() {
     BatchSetEventFlags(25000000, 25000004, OFF);
     RandomlySetEventFlagInRange(25000000, 25000004, ON);
     
-    // High Wall locations
+    //---------------------------
+    // High Wall of Lothric
+    //---------------------------
+    // Soldier's Nook
     SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000000);
     WarpPlayer(30, 0, 3000974);
     SetPlayerRespawnPoint(3002954);
     
+    // High Wall
     SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000001);
-    WarpPlayer(30, 0, 3000980);
-    SetPlayerRespawnPoint(3002950);
+    WarpPlayer(30, 0, 3000980); 
+    SetPlayerRespawnPoint(3002950); 
     
+    // Consumed King's Garden
     SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000002);
-    WarpPlayer(30, 0, 3000971);
+    WarpPlayer(30, 0, 3000971); 
     SetPlayerRespawnPoint(3002951);
     
+    // High Wall Jail
     SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000003);
-    WarpPlayer(30, 0, 3000972);
+    WarpPlayer(30, 0, 3000972); 
     SetPlayerRespawnPoint(3002952);
+    
+    //---------------------------
+    // Lothric Castle
+    //---------------------------
+    // Lothric Castle
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000004);
+    WarpPlayer(30, 1, 3010970); 
+    SetPlayerRespawnPoint(3012950);
+    
+    // Dragon Barracks 
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000005);
+    WarpPlayer(30, 1, 3010972); 
+    SetPlayerRespawnPoint(3012952);
+    
+    //---------------------------
+    // Undead Settlement
+    //---------------------------
+    // Dilapidated Bridge
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000006);
+    WarpPlayer(31, 0, 3100973);
+    SetPlayerRespawnPoint(3102953);
+    
+    // Foot of the High Wall
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000007);
+    WarpPlayer(31, 0, 3100974);
+    SetPlayerRespawnPoint(3102954);
+    
+    // Cliff Underside
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000008);
+    WarpPlayer(31, 0, 3100972);
+    SetPlayerRespawnPoint(3102952);
+    
+    //---------------------------
+    // Archdragon Peak
+    //---------------------------
+    // Archdragon Peak
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000009);
+    WarpPlayer(32, 0, 3200970);
+    SetPlayerRespawnPoint(3202950);
+    
+    // Dragon Mausoleum
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25000010);
+    WarpPlayer(32, 0, 3200973);
+    SetPlayerRespawnPoint(3202953);
+    
+    //---------------------------
+    // Road of Sacrifices/Farron Keep
+    //---------------------------
+    
 });
 
 //----------------------------------------------

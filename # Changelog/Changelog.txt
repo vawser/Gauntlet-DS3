@@ -48,9 +48,10 @@
 # TODO
 - Remove all unessential NPCs and enable NG+/COA enemies (or remove).
 - Place central bonfires for each map, disable all others
- - Setup the bonfire talks
 - Collate player points/spawnpoints for the random start placement
 - Adjust weapon scaling for new design
 
-# FIX
-- Sort out the player respawn behavior (appears to be a specific spawnpoint for each map when homeward, dead may be the bonfire one).
+ - Setup the bonfire talks
+  - 300004 Knight's Rest
+  - 310000 Giant's Tower
+  - 320002 Great Belfry
