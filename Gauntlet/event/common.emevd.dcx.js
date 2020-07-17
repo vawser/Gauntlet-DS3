@@ -14,7 +14,7 @@ Event(0, Default, function() {
     InitializeEvent(0, 230, 0); // Set Eclipse ceremonies
     InitializeEvent(0, 9570, 4500, 3740); // Forked Pale Tongue
     InitializeEvent(1, 9570, 4510, 3750); // Proof of a Concord Well Kept
-    InitializeEvent(0, 110, 0); // Setup Cinders scripts
+    InitializeEvent(0, 400001, 0); // Setup Cinders scripts
     
     EndIfMultiplayerState(EventEndType.End, MultiplayerState.Client);
     EndIfEventFlag(EventEndType.End, ON, TargetEventFlagType.EventFlag, 2052);
@@ -22,6 +22,8 @@ Event(0, Default, function() {
     //---------------------------------------
     // Host Only
     //---------------------------------------
+    InitializeEvent(0, 400000, 0); // Setup Cinders scripts
+    
     // Achievements - Locations
     InitializeEvent(0, 130, 40, 4004110, 0, -1);
     InitializeEvent(1, 130, 30, 3004110, 0, -1);
@@ -80,7 +82,7 @@ Event(0, Default, function() {
     InitializeEvent(0, 9005, 9008);
     InitializeEvent(0, 9006, 9009);
     InitializeEvent(0, 9000, 9001, 9007, 9008, 9009);
-    InitializeEvent(0, 9002, 9003);
+    InitializeEvent(0, 9002, 9003); // Halflight reset
     InitializeEvent(0, 9010, 0);
     
     // Boss Defeat - Award Items
@@ -278,21 +280,62 @@ Event(50, Default, function() {
     RemoveItemFromPlayer(ItemType.Goods, 2157, 1);
     RemoveItemFromPlayer(ItemType.Goods, 2158, 1);
     
+    // Dreams
+    RemoveItemFromPlayer(ItemType.Goods, 5000, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5001, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5002, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5003, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5004, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5005, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5006, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5007, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5008, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5009, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5010, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5011, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5012, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5013, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5014, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5015, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5016, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5017, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5018, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5019, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5020, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5021, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5022, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5023, 99);
+    
+    // Nightmares
+    RemoveItemFromPlayer(ItemType.Goods, 5100, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5101, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5102, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5103, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5104, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5105, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5106, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5107, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5108, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5109, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5110, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5111, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5112, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5113, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5114, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5115, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5116, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5117, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5118, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5119, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5120, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5121, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5122, 99);
+    RemoveItemFromPlayer(ItemType.Goods, 5123, 99);
+    
     SetEventFlag(6400, OFF);
     Label0();
 });
 
-//------------------------------------------------------
-// Gauntlet
-//------------------------------------------------------
-// Setup - Host and Client
-Event(110, Default, function() {
-    
-});
-
-//-------------------------------------
-// Vanilla
-//-------------------------------------
 Event(130, Default, function(X0_1, X1_1, X4_4, X8_2, X12_4) {
     EndIfEventFlag(EventEndType.End, ON, TargetEventFlagType.EventIDSlotNumber, 0);
     IfPlayerInoutMap(AND_01, true, X0_1, X1_1);
@@ -1616,3 +1659,1462 @@ Event(870, Default, function(X0_1, X4_4) {
     EndUnconditionally(EventEndType.Restart);
 });
 
+//------------------------------------------------------
+// Cinders
+//------------------------------------------------------
+// Setup - Host only
+Event(400000, Default, function() {
+    InitializeEvent(0, 400016, 0); // NG+ Flags
+    InitializeEvent(0, 400017, 0); // Relationships
+});
+
+// Setup - Host and Client
+Event(400001, Default, function() {
+    // Curses - Enable
+    InitializeEvent(0, 400021, 25000008, 250001200, 250001201); // Curse of Frailty
+    InitializeEvent(1, 400021, 25000001, 250001300, 250001301); // Curse of Obscurity
+    InitializeEvent(2, 400021, 25000002, 250001400, 250001401); // Curse of Vitality
+    InitializeEvent(3, 400021, 25000003, 250001100, 250001101); // Curse of Wrath
+    InitializeEvent(4, 400021, 25000004, 250001000, 250001001); // Curse of Pride
+    InitializeEvent(5, 400021, 25000006, 250001600, 250001601); // Curse of Fortitude
+    InitializeEvent(6, 400021, 25000007, 250001700, 250001701); // Curse of Gluttony
+    InitializeEvent(7, 400021, 25000005, 250001500, 250001501); // Curse of Simplicity
+    InitializeEvent(8, 400021, 25000009, 250001800, 250001801); // Curse of Enfeeblement
+    InitializeEvent(9, 400021, 25000020, 250001900, 250001901); // Curse of Impermanence
+    
+    // Marks - Enable
+    InitializeEvent(10, 400021, 25000100, 250003000, 250003001); // Mark of Sanguis
+    InitializeEvent(11, 400023, 25000101, 250003100, 250003101, 30, 0); // Mark of Canis
+    InitializeEvent(12, 400023, 25000102, 250003200, 250003201, 33, 0); // Mark of Piscis
+    
+    // Curses - Disable
+    InitializeEvent(0, 400022, 25000008, 250001200, 250001201); // Curse of Frailty
+    InitializeEvent(1, 400022, 25000001, 250001300, 250001301); // Curse of Obscurity
+    InitializeEvent(2, 400022, 25000002, 250001400, 250001401); // Curse of Vitality
+    InitializeEvent(3, 400022, 25000003, 250001100, 250001101); // Curse of Wrath
+    InitializeEvent(4, 400022, 25000004, 250001000, 250001001); // Curse of Pride
+    InitializeEvent(5, 400022, 25000006, 250001600, 250001601); // Curse of Fortitude
+    InitializeEvent(6, 400022, 25000007, 250001700, 250001701); // Curse of Gluttony
+    InitializeEvent(7, 400022, 25000005, 250001500, 250001501); // Curse of Simplicity
+    InitializeEvent(8, 400022, 25000009, 250001800, 250001801); // Curse of Enfeeblement
+    InitializeEvent(9, 400022, 25000020, 250001900, 250001901); // Curse of Impermanence
+    
+    // Marks - Disable
+    InitializeEvent(10, 400022, 25000100, 250003000, 250003001); // Mark of Sanguis
+    InitializeEvent(11, 400022, 25000101, 250003100, 250003101); // Mark of Canis
+    InitializeEvent(11, 400022, 25000102, 250003200, 250003201); // Mark of Piscis
+    
+    // Curse of Impermanence
+    InitializeEvent(0, 400120, 10000, 250001900, 25000190, 250001903);
+    
+    // Trades
+    InitializeEvent(0, 400099, 0); // Crow Trades
+    
+    // Covenant Material Drops
+    InitializeEvent(0, 400100, 10000, 160100232, 800010000, 800010020); // Thieves' Code
+    InitializeEvent(1, 400100, 10000, 160100242, 800010100, 800010120); // Darkmoon Faithful
+    InitializeEvent(2, 400100, 10000, 160100252, 800010200, 800010220); // Spears of the Church
+    InitializeEvent(3, 400100, 10000, 160100262, 800010300, 800010320); // Watchdogs of Farron
+    InitializeEvent(4, 400100, 10000, 160100272, 800010400, 800010420); // Aldrich Faithful
+    InitializeEvent(5, 400100, 10000, 160100292, 800010500, 800010520); // Warrior of Sunlight
+    InitializeEvent(6, 400100, 10000, 160100302, 800010600, 800010620); // Mound-makers
+    InitializeEvent(7, 400100, 10000, 160100322, 800010700, 800010720); // Rosaria's Fingers
+    InitializeEvent(8, 400100, 10000, 160100332, 800010800, 800010820); // Chaos Servant
+    InitializeEvent(9, 400100, 10000, 160100342, 800010900, 800010920); // Vinheim Scholars
+    InitializeEvent(10, 400100, 10000, 160100352, 800011000, 800011020); // Pilgrims of Dark
+    InitializeEvent(12, 400100, 10000, 160100372, 800011100, 800011120); // Dragon Remnants
+    InitializeEvent(11, 400100, 10000, 160100362, 800011200, 800011220); // Way of White
+    InitializeEvent(13, 400100, 10000, 160100382, 800011300, 800011320); // Blue Sentinels
+    InitializeEvent(14, 400100, 10000, 160100392, 800011400, 800011420); // Way of Blue
+    InitializeEvent(15, 400100, 10000, 160100402, 800011500, 800011520); // Company of Champions
+    
+    // Weapons
+    InitializeEvent(0, 400110, 0); // Pyromancer's Parting Flame
+
+    // Rings
+    InitializeEvent(0, 400210, 0); // Fool's Sigil - Active
+    InitializeEvent(0, 400211, 0); // Fool's Sigil - Inactive
+    
+    // Spells
+    InitializeEvent(0, 400300, 10000, 160500060); // Numbness
+    
+    // Items
+    InitializeEvent(0, 400410, 10000, 160700310, 20001); // Devil's Trumpet
+    InitializeEvent(1, 400410, 10000, 160700320, 20002); // Moonflower
+    InitializeEvent(0, 400400, 10000); // Blood of Might
+    InitializeEvent(0, 400402, 10000); // Event Flag Tool
+    
+    // Elixirs - Special
+    InitializeEvent(0, 400500, 160701000, 160701010); // Cleansing Elixir
+    InitializeEvent(0, 400501, 160701200, 160701210); // Accursed Elixir
+    InitializeEvent(0, 400502, 160701100); // Psychedelic Elixir - Special Case
+    
+    // Elixirs
+    InitializeEvent(0, 400510, 160701300, 160701310); // Elixir of Ghosts
+    InitializeEvent(1, 400510, 160701400, 160701410); // Darkmoon Elixir
+    InitializeEvent(2, 400510, 160701500, 160701510); // Holy Elixir
+    InitializeEvent(3, 400510, 160701600, 160701610); // Earthen Elixir
+    InitializeEvent(4, 400510, 160701700, 160701710); // Abyssal Elixir
+    InitializeEvent(5, 400510, 160701800, 160701810); // Sunlight Elixir
+    InitializeEvent(6, 400510, 160701900, 160701910); // Maddening Elixir
+    InitializeEvent(7, 400510, 160702000, 160702010); // Bloody Elixir
+    InitializeEvent(8, 400510, 160702100, 160702110); // Demonic Elixir
+    InitializeEvent(9, 400510, 160702200, 160702210); // Elixir of Deceit
+    InitializeEvent(10, 400510, 160702300, 160702310); // Elixir of Cooperation
+    
+    // Transformations
+    InitializeEvent(0, 400530, 160703000); // Rattling Finger
+    
+    InitializeEvent(0, 400540, 160703100, 160703110, 160703111); // Murky Finger
+    InitializeEvent(1, 400540, 160703201, 160703210, 160703211); // Demonic Claw
+    InitializeEvent(2, 400540, 160703301, 160703310, 160703311); // Forgotten Tablet
+    InitializeEvent(3, 400540, 160703401, 160703410, 160703411); // Dragon Torso Stone
+    
+    InitializeEvent(0, 400541, 160703200, 160703210, 160704000); // Demonic Skull
+    InitializeEvent(1, 400541, 160703300, 160703310, 160704000); // Forgotten Seal
+    InitializeEvent(2, 400541, 160703400, 160703410, 160704000); // Dragon Head Stone
+    
+    // Right - Weapon Auras
+    InitializeEvent(0,  400600, 160706001, 160706000); // Cleansing Oil
+    InitializeEvent(1,  400600, 160706011, 160706010); // Magical Oil
+    InitializeEvent(2,  400600, 160706021, 160706020); // Fiery Oil
+    InitializeEvent(3,  400600, 160706031, 160706030); // Sparking Oil
+    InitializeEvent(4,  400600, 160706041, 160706040); // Abyssal Oil
+    InitializeEvent(5,  400600, 160706051, 160706050); // Poisonous Oil
+    InitializeEvent(6,  400600, 160706061, 160706060); // Bloody Oil
+    InitializeEvent(7,  400600, 160706071, 160706070); // Frost Oil
+    InitializeEvent(8,  400600, 160706081, 160706080); // Moonlit Oil
+    InitializeEvent(9,  400600, 160706091, 160706090); // Blessed Oil
+    InitializeEvent(10, 400600, 160706101, 160706100); // Black Fire Oil
+    
+    // Left - Weapon Auras
+    InitializeEvent(0,  400601, 160706006, 160706005); // Cleansing Oil
+    InitializeEvent(1,  400601, 160706016, 160706015); // Magical Oil
+    InitializeEvent(2,  400601, 160706026, 160706025); // Fiery Oil
+    InitializeEvent(3,  400601, 160706036, 160706035); // Sparking Oil
+    InitializeEvent(4,  400601, 160706046, 160706045); // Abyssal Oil
+    InitializeEvent(5,  400601, 160706056, 160706055); // Poisonous Oil
+    InitializeEvent(6,  400601, 160706066, 160706065); // Bloody Oil
+    InitializeEvent(7,  400601, 160706076, 160706075); // Frost Oil
+    InitializeEvent(8,  400601, 160706086, 160706085); // Moonlit Oil
+    InitializeEvent(9,  400601, 160706096, 160706095); // Blessed Oil
+    InitializeEvent(10, 400601, 160706106, 160706105); // Black Fire Oil
+    
+    // General Scripts
+    InitializeEvent(0, 400700, 10000); // No Hit State
+    InitializeEvent(0, 400800, 10000); // FP Regen
+    
+    // Bosses
+    InitializeEvent(0, 4008010, 0); // Corrupted Gundyr
+    InitializeEvent(0, 4008020, 0); // Vordt of the Boreal Valley
+    InitializeEvent(0, 4008030, 0); // Curse-rotted Greatwood
+    InitializeEvent(0, 4008040, 0); // Crystal Sage
+    InitializeEvent(0, 4008050, 0); // Deacons of the Deep
+    InitializeEvent(0, 4008060, 0); // Abyss Watchers
+    InitializeEvent(0, 4008070, 0); // High Lord Wolnir
+    InitializeEvent(0, 4008080, 0); // Old Demon King
+    InitializeEvent(0, 4008090, 0); // Pontiff Sulyvahn
+    InitializeEvent(0, 4008100, 0); // Aldrich, Devourer of Gods
+    InitializeEvent(0, 4008110, 0); // Yhorm the Giant
+    InitializeEvent(0, 4008120, 0); // Dancer of the Boreal Valley
+    InitializeEvent(0, 4008130, 0); // Oceiros, the Consumed King
+    InitializeEvent(0, 4008140, 0); // Dragonslayer Armour
+    InitializeEvent(0, 4008150, 0); // Ancient Wyvern
+    InitializeEvent(0, 4008160, 0); // Nameless King
+    InitializeEvent(0, 4008170, 0); // Champion Gundyr
+    InitializeEvent(0, 4008180, 0); // Twin Princes
+    InitializeEvent(0, 4008190, 0); // Soul of Cinder
+    InitializeEvent(0, 4008200, 0); // Sister Friede
+    InitializeEvent(0, 4008210, 0); // Lordran Remannts
+    InitializeEvent(0, 4008220, 0); // Demon Prince
+    InitializeEvent(0, 4008230, 0); // Darkeater Midir
+    InitializeEvent(0, 4008240, 0); // Slave Knight Gael
+    InitializeEvent(0, 4008250, 0); // Halflight
+});
+
+// FP Regen
+Event(400800, Default, function(X0_4) {
+    IfCharacterHasSpeffect(MAIN, X0_4, 113000, false, ComparisonType.Equal, 1);
+    IfCharacterHasSpeffect(MAIN, X0_4, 113001, false, ComparisonType.Equal, 1);
+    IfCharacterHasSpeffect(MAIN, X0_4, 113002, false, ComparisonType.Equal, 1);
+    IfCharacterHasSpeffect(MAIN, X0_4, 113003, false, ComparisonType.Equal, 1);
+    IfCharacterHasSpeffect(MAIN, X0_4, 113004, false, ComparisonType.Equal, 1);
+    IfCharacterHasSpeffect(MAIN, X0_4, 113005, false, ComparisonType.Equal, 1);
+    
+    // Add Base FP
+    IfCharacterHasSpeffect(AND_01, X0_4, 250001500, true, ComparisonType.Equal, 1); //  Curse of Simplicity
+    SkipIfConditionGroupStateUncompiled(1, PASS, AND_01);
+    SetSpeffect(X0_4, 113100);
+    
+    // Enchanted - 200001100
+    IfCharacterHasSpeffect(AND_02, X0_4, 200001100, false, ComparisonType.Equal, 1);
+    SkipIfConditionGroupStateUncompiled(1, PASS, AND_02);
+    SetSpeffect(X0_4, 113101);
+    
+    // Clarity - 200002000
+    IfCharacterHasSpeffect(AND_03, X0_4, 200002000, false, ComparisonType.Equal, 1);
+    SkipIfConditionGroupStateUncompiled(1, PASS, AND_03);
+    SetSpeffect(X0_4, 113102);
+    
+    // Darkmoon Faithful - 160100240
+    IfCharacterHasSpeffect(AND_04, X0_4, 160100240, false, ComparisonType.Equal, 1);
+    SkipIfConditionGroupStateUncompiled(1, PASS, AND_04);
+    SetSpeffect(X0_4, 113103);
+    
+    // Darkmoon Ring - 160600350
+    IfCharacterHasSpeffect(AND_05, X0_4, 160600350, false, ComparisonType.Equal, 1);
+    SkipIfConditionGroupStateUncompiled(1, PASS, AND_05);
+    SetSpeffect(X0_4, 113104);
+    
+    // Ring of Catastrophe - 160601270
+    IfCharacterHasSpeffect(AND_06, X0_4, 160601270, false, ComparisonType.Equal, 1);
+    SkipIfConditionGroupStateUncompiled(1, PASS, AND_06);
+    SetSpeffect(X0_4, 113105);
+    
+    // Reset
+    WaitFixedTimeSeconds(0.2);
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// No Hit State
+Event(400700, Default, function(X0_4) {
+    SetEventFlag(25006000, 0);
+    IfCharacterHasSpeffect(MAIN, X0_4, 112060, true, ComparisonType.Equal, 1);
+    SetEventFlag(25006000, 1);
+    EndUnconditionally(EventEndType.End);
+});
+
+// Cleansing Elixir
+Event(400500, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    // Elixirs
+    ClearSpeffect(10000, 160701100); // Psychedelic Elixir
+    ClearSpeffect(10000, 160701110); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701112); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701113); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701114); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701115); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701116); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701117); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701118); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701418); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701210); // Accursed Elixir
+    ClearSpeffect(10000, 160701310); // Elixir of Ghosts
+    ClearSpeffect(10000, 160701410); // Darkmoon Elixir
+    ClearSpeffect(10000, 160701510); // Holy Elixir
+    ClearSpeffect(10000, 160701610); // Earthen Elixir
+    ClearSpeffect(10000, 160701710); // Abyssal Elixir
+    ClearSpeffect(10000, 160701810); // Sunlight Elixir
+    ClearSpeffect(10000, 160701910); // Maddening Elixir 
+    ClearSpeffect(10000, 160702010); // Bloody Elixir
+    ClearSpeffect(10000, 160702110); // Demonic Elixir
+    ClearSpeffect(10000, 160702210); // Elixir of Deceit
+    ClearSpeffect(10000, 160702310); // Elixir of Cooperation
+    
+    // Transformations
+    ClearSpeffect(10000, 160703000); // Rattling Finger
+    ClearSpeffect(10000, 160703010); // Rattling Finger - Type 1 (Head)
+    ClearSpeffect(10000, 160703020); // Rattling Finger - Type 2 (Head)
+    ClearSpeffect(10000, 160703030); // Rattling Finger - Type 3 (Head)
+    ClearSpeffect(10000, 160703040); // Rattling Finger - Type 4 (Head)
+    ClearSpeffect(10000, 160703110); // Murky Finger (Head)
+    ClearSpeffect(10000, 160703210); // Demonic Skull (Head)
+    ClearSpeffect(10000, 160703310); // Forgotten Seal (Head)
+    ClearSpeffect(10000, 160703410); // Dragon Head Stone (Head)
+    
+    ClearSpeffect(10000, 160703011); // Rattling Finger - Type 1 (Body)
+    ClearSpeffect(10000, 160703021); // Rattling Finger - Type 2 (Body)
+    ClearSpeffect(10000, 160703031); // Rattling Finger - Type 3 (Body)
+    ClearSpeffect(10000, 160703041); // Rattling Finger - Type 4 (Body)
+    ClearSpeffect(10000, 160703111); // Murky Finger (Body)
+    ClearSpeffect(10000, 160703211); // Demonic Claw (Body)
+    ClearSpeffect(10000, 160703311); // Forgotten Tablet (Body)
+    ClearSpeffect(10000, 160703411); // Dragon Torso Stone (Body)
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Accursed Elixir
+Event(400501, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    ClearSpeffect(10000, 160701300); // Accursed Elixir
+    
+    // Elixirs
+    SetSpeffect(10000, X4_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Psychedelic Elixir - Triggered
+Event(400502, Default, function(X0_4) {
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701118);
+    SetSpeffect(10000, 160701110);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+        
+    ClearSpeffect(10000, 160701110);
+    SetSpeffect(10000, 160701111);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701111);
+    SetSpeffect(10000, 160701112);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701112);
+    SetSpeffect(10000, 160701113);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701113);
+    SetSpeffect(10000, 160701114);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701114);
+    SetSpeffect(10000, 160701115);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701115);
+    SetSpeffect(10000, 160701116);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701116);
+    SetSpeffect(10000, 160701117);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    ClearSpeffect(10000, 160701117);
+    SetSpeffect(10000, 160701118);
+    WaitFixedTimeSeconds(0.1);
+    IfCharacterHasSpeffect(AND_01, 10000, X0_4, false, ComparisonType.Equal, 1);
+    EndIfConditionGroupStateUncompiled(EventEndType.Restart, PASS, AND_01);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// X Elixir
+Event(400510, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    // Elixirs
+    ClearSpeffect(10000, 160701100); // Psychedelic Elixir
+    ClearSpeffect(10000, 160701110); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701112); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701113); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701114); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701115); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701116); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701117); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701118); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701418); // Psychedelic Elixir - Color
+    ClearSpeffect(10000, 160701210); // Accursed Elixir
+    ClearSpeffect(10000, 160701310); // Elixir of Ghosts
+    ClearSpeffect(10000, 160701410); // Darkmoon Elixir
+    ClearSpeffect(10000, 160701510); // Holy Elixir
+    ClearSpeffect(10000, 160701610); // Earthen Elixir
+    ClearSpeffect(10000, 160701710); // Abyssal Elixir
+    ClearSpeffect(10000, 160701810); // Sunlight Elixir
+    ClearSpeffect(10000, 160701910); // Maddening Elixir 
+    ClearSpeffect(10000, 160702010); // Bloody Elixir
+    ClearSpeffect(10000, 160702110); // Demonic Elixir
+    ClearSpeffect(10000, 160702210); // Elixir of Deceit
+    ClearSpeffect(10000, 160702310); // Elixir of Cooperation
+
+    SetSpeffect(10000, X4_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Rattling Finger
+Event(400530, Default, function(X0_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    ClearSpeffect(10000, 160703000); // Rattling Finger
+    ClearSpeffect(10000, 160703010); // Rattling Finger - Type 1 (Head)
+    ClearSpeffect(10000, 160703020); // Rattling Finger - Type 2 (Head)
+    ClearSpeffect(10000, 160703030); // Rattling Finger - Type 3 (Head)
+    ClearSpeffect(10000, 160703040); // Rattling Finger - Type 4 (Head)
+    ClearSpeffect(10000, 160703110); // Murky Finger (Head)
+    ClearSpeffect(10000, 160703210); // Demonic Skull (Head)
+    ClearSpeffect(10000, 160703310); // Forgotten Seal (Head)
+    ClearSpeffect(10000, 160703410); // Dragon Head Stone (Head)
+    
+    ClearSpeffect(10000, 160703011); // Rattling Finger - Type 1 (Body)
+    ClearSpeffect(10000, 160703021); // Rattling Finger - Type 2 (Body)
+    ClearSpeffect(10000, 160703031); // Rattling Finger - Type 3 (Body)
+    ClearSpeffect(10000, 160703041); // Rattling Finger - Type 4 (Body)
+    ClearSpeffect(10000, 160703111); // Murky Finger (Body)
+    ClearSpeffect(10000, 160703211); // Demonic Claw (Body)
+    ClearSpeffect(10000, 160703311); // Forgotten Tablet (Body)
+    ClearSpeffect(10000, 160703411); // Dragon Torso Stone (Body)
+
+    SetEventFlag(25007011, OFF);
+    SetEventFlag(25007012, OFF);
+    SetEventFlag(25007013, OFF);
+    SetEventFlag(25007014, OFF);
+    RandomlySetEventFlagInRange(25007011, 25007014, ON);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007011);
+    SetSpeffect(10000, 160703010);
+    SetSpeffect(10000, 160703011);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007012);
+    SetSpeffect(10000, 160703020);
+    SetSpeffect(10000, 160703021);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007013);
+    SetSpeffect(10000, 160703030);
+    SetSpeffect(10000, 160703031);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007014);
+    SetSpeffect(10000, 160703040);
+    SetSpeffect(10000, 160703041);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Transformation - Full
+Event(400540, Default, function(X0_4, X4_4, X8_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    ClearSpeffect(10000, 160703000); // Rattling Finger
+    ClearSpeffect(10000, 160703010); // Rattling Finger - Type 1 (Head)
+    ClearSpeffect(10000, 160703020); // Rattling Finger - Type 2 (Head)
+    ClearSpeffect(10000, 160703030); // Rattling Finger - Type 3 (Head)
+    ClearSpeffect(10000, 160703040); // Rattling Finger - Type 4 (Head)
+    ClearSpeffect(10000, 160703110); // Murky Finger (Head)
+    ClearSpeffect(10000, 160703210); // Demonic Skull (Head)
+    ClearSpeffect(10000, 160703310); // Forgotten Seal (Head)
+    ClearSpeffect(10000, 160703410); // Dragon Head Stone (Head)
+    
+    ClearSpeffect(10000, 160703011); // Rattling Finger - Type 1 (Body)
+    ClearSpeffect(10000, 160703021); // Rattling Finger - Type 2 (Body)
+    ClearSpeffect(10000, 160703031); // Rattling Finger - Type 3 (Body)
+    ClearSpeffect(10000, 160703041); // Rattling Finger - Type 4 (Body)
+    ClearSpeffect(10000, 160703111); // Murky Finger (Body)
+    ClearSpeffect(10000, 160703211); // Demonic Claw (Body)
+    ClearSpeffect(10000, 160703311); // Forgotten Tablet (Body)
+    ClearSpeffect(10000, 160703411); // Dragon Torso Stone (Body)
+    
+    SetSpeffect(10000, X4_4);
+    SetSpeffect(10000, X8_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Transformation - Head
+Event(400541, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    ClearSpeffect(10000, 160703000); // Rattling Finger
+    ClearSpeffect(10000, 160703010); // Rattling Finger - Type 1 (Head)
+    ClearSpeffect(10000, 160703020); // Rattling Finger - Type 2 (Head)
+    ClearSpeffect(10000, 160703030); // Rattling Finger - Type 3 (Head)
+    ClearSpeffect(10000, 160703040); // Rattling Finger - Type 4 (Head)
+    ClearSpeffect(10000, 160703110); // Murky Finger (Head)
+    ClearSpeffect(10000, 160703210); // Demonic Skull (Head)
+    ClearSpeffect(10000, 160703310); // Forgotten Seal (Head)
+    ClearSpeffect(10000, 160703410); // Dragon Head Stone (Head)
+    
+    SetSpeffect(10000, X4_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Apply Stone (Right)
+Event(400600, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    ClearSpeffect(10000, 160706010);
+    ClearSpeffect(10000, 160706020);
+    ClearSpeffect(10000, 160706030);
+    ClearSpeffect(10000, 160706040);
+    ClearSpeffect(10000, 160706050);
+    ClearSpeffect(10000, 160706060);
+    ClearSpeffect(10000, 160706070);
+    ClearSpeffect(10000, 160706080);
+    ClearSpeffect(10000, 160706090);
+    ClearSpeffect(10000, 160706100);
+    
+    SetSpeffect(10000, X4_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Apply Stone (Left)
+Event(400601, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, 10000, X0_4, true, ComparisonType.Equal, 1);
+    
+    ClearSpeffect(10000, 160706015);
+    ClearSpeffect(10000, 160706025);
+    ClearSpeffect(10000, 160706035);
+    ClearSpeffect(10000, 160706045);
+    ClearSpeffect(10000, 160706055);
+    ClearSpeffect(10000, 160706065);
+    ClearSpeffect(10000, 160706075);
+    ClearSpeffect(10000, 160706085);
+    ClearSpeffect(10000, 160706095);
+    ClearSpeffect(10000, 160706105);
+    
+    SetSpeffect(10000, X4_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Add Effect to X
+Event(400010, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, X0_4, X4_4, true, ComparisonType.GreaterOrEqual, 0);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    SetSpeffect(X0_4, X4_4);
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// NG+ Flags
+Event(400016, Default, function() {
+    IfGameCycle(MAIN, ComparisonType.GreaterOrEqual, 1);
+    SetEventFlag(25000011, ON); // NG+1
+    
+    IfGameCycle(MAIN, ComparisonType.GreaterOrEqual, 2);
+    SetEventFlag(25000012, ON); // NG+2
+    
+    IfGameCycle(MAIN, ComparisonType.GreaterOrEqual, 3);
+    SetEventFlag(25000013, ON); // NG+3
+    
+    IfGameCycle(MAIN, ComparisonType.GreaterOrEqual, 4);
+    SetEventFlag(25000014, ON); // NG+4
+    
+    IfGameCycle(MAIN, ComparisonType.GreaterOrEqual, 5);
+    SetEventFlag(25000015, ON); // NG+5
+});
+
+// Relationship Flirt Flag
+Event(400017, Restart, function() {
+    SetEventFlag(25008900, OFF); 
+    SetEventFlag(25008901, OFF); 
+    SetEventFlag(25008902, OFF); 
+    SetEventFlag(25008904, OFF);
+    
+    RandomlySetEventFlagInRange(25008900, 25008902, ON);
+});
+
+// Show Curse Information
+Event(400020, Restart, function(X0_4, X4_4) {
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, X0_4);
+    DisplayEpitaphMessage(X4_4);
+    SetEventFlag(X0_4, OFF);
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Enable Curse
+Event(400021, Restart, function(X0_4, X4_4, X8_4) {
+    IfEventFlag(MAIN, ON, TargetEventFlagType.EventFlag, X0_4);
+    SetSpeffect(10000, X4_4);
+    SetSpeffect(10000, X8_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Disable Curse
+Event(400022, Restart, function(X0_4, X4_4, X8_4) {
+    IfEventFlag(MAIN, OFF, TargetEventFlagType.EventFlag, X0_4);
+    ClearSpeffect(10000, X4_4);
+    ClearSpeffect(10000, X8_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Enable Curse - Map Specific
+Event(400023, Restart, function(X0_4, X4_4, X8_4, X12_1, X16_1) {
+    IfEventFlag(MAIN, ON, TargetEventFlagType.EventFlag, X0_4);
+    IfPlayerInoutMap(MAIN, true, X12_1, X16_1);
+    SetSpeffect(10000, X4_4);
+    SetSpeffect(10000, X8_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Crow Trades
+Event(400099, Default, function() {
+    InitializeCrowTrade(ItemType.Goods, 2162, 80000, -1, 74000996);
+    InitializeCrowTrade(ItemType.Goods, 2163, 80100, -1, 74000996);
+    InitializeCrowTrade(ItemType.Goods, 2164, 80200, -1, 74000996);
+});
+
+// Covenant - Trigger Covenant Item Drop
+Event(400100, Default, function(X0_4, X4_4, X8_4, X12_4) {
+    IfCharacterHasSpeffect(AND_01, X0_4, X4_4, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Normal Rate
+    IfInoutsideArea(OR_01, InsideOutsideState.Inside, 10000, 3502930, 1); // Area: Graveyard 1
+    IfInoutsideArea(OR_01, InsideOutsideState.Inside, 10000, 3502931, 1); // Area: Graveyard 2
+    IfInoutsideArea(OR_01, InsideOutsideState.Inside, 10000, 3502932, 1); // Area: Deacons
+    IfInoutsideArea(OR_01, InsideOutsideState.Inside, 10000, 3102930, 1); // Area: Rats
+    IfInoutsideArea(OR_01, InsideOutsideState.Inside, 10000, 3902930, 1); // Area: Giant + Rats
+    IfInoutsideArea(OR_01, InsideOutsideState.Inside, 10000, 5002930, 1); // Area: Murkmen
+    SkipIfConditionGroupStateUncompiled(1, PASS, OR_01);
+    AwardItemsIncludingClients(X8_4);
+    
+    // Reduced Rate
+    IfInoutsideArea(OR_02, InsideOutsideState.Outside, 10000, 3502930, 1); // Area: Graveyard 1
+    IfInoutsideArea(OR_02, InsideOutsideState.Outside, 10000, 3502931, 1); // Area: Graveyard 2
+    IfInoutsideArea(OR_02, InsideOutsideState.Outside, 10000, 3502932, 1); // Area: Deacons
+    IfInoutsideArea(OR_02, InsideOutsideState.Outside, 10000, 3102930, 1); // Area: Rats
+    IfInoutsideArea(OR_02, InsideOutsideState.Outside, 10000, 3902930, 1); // Area: Giant + Rats
+    IfInoutsideArea(OR_02, InsideOutsideState.Outside, 10000, 5002930, 1); // Area: Murkmen
+    SkipIfConditionGroupStateUncompiled(1, PASS, OR_02);
+    AwardItemsIncludingClients(X12_4);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Pyromancer's Parting Flame - Ascension
+Event(400110, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 130134100, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    SetSpeffect(10000, 130134101);
+    
+    IfCharacterHasSpeffect(AND_01, 10000, 130134100, false, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    ClearSpeffect(10000, 130134101);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Curse Effect at Random Interval
+Event(400120, Default, function(X0_4, X4_4, X8_4, X12_4) {
+    IfCharacterHasSpeffect(AND_01, X0_4, X4_4, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    SetSpeffect(X0_4, X8_4);
+    SetSpeffect(X0_4, X12_4);
+    
+    WaitRandomTimeSeconds(10, 30);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Fool's Sigil - Setup
+Event(400210, Default, function() {
+    IfCharacterHasSpeffect(MAIN, 10000, 160601570, true, ComparisonType.Equal, 1);
+    SetEventFlag(25007000, ON);
+    SetEventFlag(25007001, OFF);
+    SetEventFlag(25007002, OFF);
+    SetEventFlag(25007003, OFF);
+    SetEventFlag(25007004, OFF);
+    SetEventFlag(25007005, OFF);
+    SetEventFlag(25007006, OFF);
+    SetEventFlag(25007007, OFF);
+    SetEventFlag(25007008, OFF);
+    RandomlySetEventFlagInRange(25007001, 25007008, ON);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007001);
+    SetSpeffect(10000, 160601571);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007002);
+    SetSpeffect(10000, 160601572);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007003);
+    SetSpeffect(10000, 160601573);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007004);
+    SetSpeffect(10000, 160601574);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007005);
+    SetSpeffect(10000, 160601575);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007006);
+    SetSpeffect(10000, 160601576);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007007);
+    SetSpeffect(10000, 160601577);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007008);
+    SetSpeffect(10000, 160601578);
+    
+    WaitFixedTimeSeconds(15);
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Fool's Sigil - Clear Effects
+Event(400211, Default, function() {
+    IfEventFlag(MAIN, ON, TargetEventFlagType.EventFlag, 25007000);
+    IfCharacterHasSpeffect(MAIN, 10000, 160601570, false, ComparisonType.Equal, 1);
+    ClearSpeffect(10000, 160601571);
+    ClearSpeffect(10000, 160601572);
+    ClearSpeffect(10000, 160601573);
+    ClearSpeffect(10000, 160601574);
+    ClearSpeffect(10000, 160601575);
+    ClearSpeffect(10000, 160601576);
+    ClearSpeffect(10000, 160601577);
+    ClearSpeffect(10000, 160601578);
+    SetSpeffect(10000, 160601579);
+    SetEventFlag(25007000, OFF);
+    WaitFixedTimeFrames(1);
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Numbness - Change Camera
+Event(400300, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(AND_01, X0_4, X4_4, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    ChangeCamera(20000, 20000);
+    Label0();
+    IfCharacterHasSpeffect(AND_02, X0_4, X4_4, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, FAIL, AND_02);
+    ChangeCamera(-1, -1);
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Blood of Might - Reset flags
+Event(400400, Default, function(X0_4) {
+    IfCharacterHasSpeffect(AND_01, X0_4, 160700030, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // m51_1
+    SetEventFlag(15100744, OFF); // Glaive Master Hodir
+    SetEventFlag(15100732, OFF); // Freya the Wretched
+    SetEventFlag(15100734, OFF); // Nahor the Fallen
+    SetEventFlag(15100736, OFF); // Easterner Iazeel
+    SetEventFlag(15100738, OFF); // Seeker of the Spurned
+    SetEventFlag(15100746, OFF); // Moaning Knight
+    SetEventFlag(15100748, OFF); // Silver Knight Ledo 
+    
+    // m50
+    SetEventFlag(15000730, OFF); // Dulfish the Accursed
+    SetEventFlag(15000180, OFF); // Desert Pyromancer Zoey
+    
+    // m45
+    SetEventFlag(14500738, OFF); // Ezekiel the Duelist
+    SetEventFlag(14500742, OFF); // Eija the Shadow
+    SetEventFlag(14500734, OFF); // Frozen Knight Torbjorn
+    SetEventFlag(14500736, OFF); // Disciple of Alsanna
+    
+    // m41
+    SetEventFlag(14100810, OFF); // Lord Zakar
+    
+    // m40
+    SetEventFlag(14000890, OFF); // Blacksmith's Nightmare
+    SetEventFlag(14000892, OFF); // Ashen Keeper Sofija
+    SetEventFlag(9500, OFF); // Sword Master
+    
+    // m39
+    SetEventFlag(13900730, OFF); // Corrupted Knight Lloyd
+    SetEventFlag(13900732, OFF); // Jailer Eileen
+    SetEventFlag(13900734, OFF); // Ollis the Merciless
+    SetEventFlag(13900736, OFF); // Fester the Jester
+    SetEventFlag(13900738, OFF); // Vileblood Annalise
+    SetEventFlag(13900740, OFF); // Bewitched Knight Iwai
+    SetEventFlag(13900742, OFF); // Lord Takatsuji
+    SetEventFlag(13900744, OFF); // Lieutenant Ugali
+    SetEventFlag(13900746, OFF); // Lieutenant Hanji
+    SetEventFlag(13900748, OFF); // Alva, Seeker of the Spurned
+    SetEventFlag(13900760, OFF); // The Pursuer
+    SetEventFlag(13900360, OFF); // Court Sorcerer
+    
+    // m38
+    SetEventFlag(13800790, OFF); // Holy Knight Morton
+    SetEventFlag(13800792, OFF); // Tomb Raider Dyfan
+    SetEventFlag(13800794, OFF); // Chaos Servant Eygor
+    SetEventFlag(13800763, OFF); // The Father
+    SetEventFlag(13800761, OFF); // The Mother
+    SetEventFlag(13800762, OFF); // The Child
+    SetEventFlag(13800398, OFF); // Knight Slayer Tsorig
+    
+    // m37
+    SetEventFlag(13700733, OFF); // Boreal Outrider Knight
+    SetEventFlag(13700734, OFF); // Boreal Outrider Knight
+    SetEventFlag(13700544, OFF); // Deep Accursed
+    SetEventFlag(13700761, OFF); // Dragonrider
+    SetEventFlag(13700766, OFF); // Wandering Knight Osvaldo
+    SetEventFlag(13700762, OFF); // Devotee Scarlett
+    SetEventFlag(13700764, OFF); // The Pursuer
+    SetEventFlag(13700198, OFF); // Drang Knight (Hammer)
+    SetEventFlag(13700199, OFF); // Drang Knight (Twinspear)
+    
+    // m35
+    SetEventFlag(13500196, OFF); // Ravenous Crystal Lizard
+    SetEventFlag(13500198, OFF); // Morne's Armor
+    SetEventFlag(13500746, OFF); // Morric, the Fallen Knight
+    SetEventFlag(13500742, OFF); // Hallowed Knight Orthell
+    SetEventFlag(13500744, OFF); // Longfinger Kirk
+    SetEventFlag(13500286, OFF); // Thief
+    SetEventFlag(13500285, OFF); // Brigand
+    
+    // m34_1
+    SetEventFlag(13410192, OFF); // Boreal Outrider Knight
+    SetEventFlag(13410256, OFF); // Black Dragon Knight (Greataxe)
+    SetEventFlag(13410257, OFF); // Black Dragon Knight (Greatsword)
+    SetEventFlag(13410258, OFF); // Black Dragon Knight (Sword)
+    SetEventFlag(13410730, OFF); // The Pursuer
+    SetEventFlag(13410732, OFF); // Quintus the Monstrous
+    SetEventFlag(13410204, OFF); // Black Hand Gotthard
+    SetEventFlag(13410202, OFF); // Lion Knight Albert
+    SetEventFlag(13410203, OFF); // Daughter of Crystal Kriemhild
+    
+    // m33
+    SetEventFlag(13300603, OFF); // Ravenous Crystal Lizard
+    SetEventFlag(13300742, OFF); // The Forlorn
+    SetEventFlag(13300744, OFF); // Forgotten Locklin
+    SetEventFlag(13300395, OFF); // Butcher
+    SetEventFlag(13300396, OFF); // Exile Watchdog
+    SetEventFlag(13300397, OFF); // Exile Watchdog
+    
+    // m32
+    SetEventFlag(13200430, OFF); // Dragon Cultist
+    SetEventFlag(13200431, OFF); // Dragon Cultist
+    SetEventFlag(13200432, OFF); // Dragon Cultist
+    SetEventFlag(13200433, OFF); // Dragon Cultist
+    SetEventFlag(13200434, OFF); // Dragon Cultist
+    SetEventFlag(13200435, OFF); // Dragon Cultist
+    SetEventFlag(13200730, OFF); // Gaius the Mighty
+    SetEventFlag(13200732, OFF); // Dragon Hunter Karstark
+    SetEventFlag(13200299, OFF); // Havel the Rock
+    
+    // m31
+    SetEventFlag(13100613, OFF); // Boreal Outrider Knight
+    SetEventFlag(13100615, OFF); // Boreal Outrider Knight
+    SetEventFlag(13100780, OFF); // Eccentric Archibald
+    
+    // m30_1
+    SetEventFlag(13010730, OFF); // Luyila of Londor
+    SetEventFlag(13010732, OFF); // Dominatrix Sharron
+    SetEventFlag(13010734, OFF); // The Pursuer
+    SetEventFlag(13010736, OFF); // Tiny
+    
+    // m30
+    SetEventFlag(13000720, OFF); // Mirror Knight
+    SetEventFlag(13000622, OFF); // Boreal Outrider Knight
+    SetEventFlag(13000732, OFF); // Captain Morrel
+    SetEventFlag(13000734, OFF); // Huntmaster Ava
+    SetEventFlag(13000736, OFF); // The Pursuer
+    SetEventFlag(13000730, OFF); // Inquisitor Ashford
+    
+    DisplayMessage(99007000, 1);
+});
+
+
+// Event Flag Tool
+Event(400402, Default, function(X0_4) {
+    IfCharacterHasSpeffect(AND_01, X0_4, 160710000, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    SetEventFlag(25008903, ON); 
+    
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Item - Camera Override
+Event(400410, Default, function(X0_4, X4_4, X8_4) {
+    IfCharacterHasSpeffect(AND_01, X0_4, X4_4, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    ChangeCamera(X8_4, X8_4);
+    Label0();
+    IfCharacterHasSpeffect(AND_02, X0_4, X4_4, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, FAIL, AND_02);
+    ChangeCamera(-1, -1);
+    EndUnconditionally(EventEndType.Restart);
+});
+
+// Corrupted Gundyr - Respawn
+Event(4008010, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100010, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(14000800, OFF);
+    SetEventFlag(9319, OFF);
+    SetEventFlag(6319, OFF);
+    SetEventFlag(14000002, OFF);
+    SetEventFlag(64000260, OFF);
+    SetEventFlag(64000261, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(4002950);
+    SetMapCeremony(40, 0, 0);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(40, 0, 4000980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Vordt - Respawn
+Event(4008020, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100020, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13000800, OFF);
+    SetEventFlag(9301, OFF);
+    SetEventFlag(6301, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3002958);
+
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(30, 0, 3000982);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Curse-rotted Greatwood - Respawn
+Event(4008030, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100030, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13100800, OFF);
+    SetEventFlag(9303, OFF);
+    SetEventFlag(6303, OFF);
+    SetEventFlag(13100001, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3102953);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(31, 0, 3100980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Crystal Sage - Respawn
+Event(4008040, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100040, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13300850, OFF);
+    SetEventFlag(9306, OFF);
+    SetEventFlag(6306, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3302957);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(33, 0, 3300980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Deacons of the Deep - Respawn
+Event(4008050, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100050, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13500800, OFF);
+    SetEventFlag(9311, OFF);
+    SetEventFlag(6311, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3502950);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(35, 0, 3500980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Abyss Watchers - Respawn
+Event(4008060, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100060, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13300800, OFF);
+    SetEventFlag(9307, OFF);
+    SetEventFlag(6307, OFF);
+    SetEventFlag(13300421, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3302958);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(33, 0, 3300981);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// High Lord Wolnir - Respawn
+Event(4008070, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100070, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+   
+    // Flags
+    SetEventFlag(13800800, OFF);
+    SetEventFlag(9315, OFF);
+    SetEventFlag(6315, OFF);
+    SetEventFlag(13801800, OFF);
+    SetEventFlag(63800560, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3802950);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(38, 0, 3800980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Old Demon King - Respawn
+Event(4008080, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100080, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13800830, OFF);
+    SetEventFlag(9317, OFF);
+    SetEventFlag(6317, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3802952);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(38, 0, 3800981);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Pontiff Sulyvahn - Respawn
+Event(4008090, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100090, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+   
+    // Flags
+    SetEventFlag(13700850, OFF);
+    SetEventFlag(9313, OFF);
+    SetEventFlag(6313, OFF);
+    SetEventFlag(13700420, OFF); // Lift
+    SetEventFlag(13700421, OFF); // Lift
+    SetEventFlag(13700422, OFF); // Lift
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3702950);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(37, 0, 3700980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Aldrich - Respawn
+Event(4008100, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100100, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13700800, OFF);
+    SetEventFlag(9314, OFF);
+    SetEventFlag(6314, OFF);
+    SetEventFlag(13700002, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3702953);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(37, 0, 3700981);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Yhorm the Giant - Respawn
+Event(4008110, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100110, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13900800, OFF);
+    SetEventFlag(9318, OFF);
+    SetEventFlag(6318, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3902952);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(39, 0, 3900980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Dancer - Respawn
+Event(4008120, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100120, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13000890, OFF);
+    SetEventFlag(9300, OFF);
+    SetEventFlag(6300, OFF);
+    SetEventFlag(13000885, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3002955);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(30, 0, 3000981);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Oceiros - Respawn
+Event(4008130, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100130, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13000830, OFF);
+    SetEventFlag(9302, OFF);
+    SetEventFlag(6302, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3002951);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(30, 0, 3000983);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Dragonslayer Armour - Respawn
+Event(4008140, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100140, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13010800, OFF);
+    SetEventFlag(9308, OFF);
+    SetEventFlag(6308, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3012952);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(30, 1, 3010980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Ancient Wyvern - Respawn
+Event(4008150, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100150, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13200800, OFF);
+    SetEventFlag(9305, OFF);
+    SetEventFlag(6305, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3202950);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(32, 0, 3200980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Nameless King - Respawn
+Event(4008160, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100160, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13200850, OFF);
+    SetEventFlag(9304, OFF);
+    SetEventFlag(6304, OFF);
+    SetEventFlag(13200440, OFF);
+    SetEventFlag(13200445, OFF);
+    SetEventFlag(13200855, OFF);
+    SetEventFlag(13200856, OFF);
+    SetEventFlag(13200862, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3202952);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(32, 0, 3200981);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Champion Gundyr - Respawn
+Event(4008170, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100170, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(14000830, OFF);
+    SetEventFlag(9320, OFF);
+    SetEventFlag(6320, OFF);
+    SetEventFlag(14000004, OFF);
+    SetEventFlag(64000260, OFF);
+    SetEventFlag(64000261, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(4002953);
+    SetMapCeremony(40, 0, 10);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(40, 0, 4000981);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Twin Princes - Respawn
+Event(4008180, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100180, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(13410830, OFF);
+    SetEventFlag(9309, OFF);
+    SetEventFlag(6309, OFF);
+    SetEventFlag(13410000, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(3412951);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(34, 1, 3410980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Soul of Cinder - Respawn
+Event(4008190, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100190, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(14100800, OFF);
+    SetEventFlag(14101100, OFF);
+    SetEventFlag(9321, OFF);
+    SetEventFlag(6321, OFF);
+    SetEventFlag(14100002, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(4102951);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(41, 0, 4100980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Sister Friede - Respawn
+Event(4008200, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100200, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(14500800, OFF);
+    SetEventFlag(9322, OFF);
+    SetEventFlag(6322, OFF);
+    SetEventFlag(14500000, OFF);
+    SetEventFlag(14500162, OFF); // Dreg Heap warp
+    
+    // Warp Player
+    SetPlayerRespawnPoint(4502955);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(45, 0, 4500980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Lordran Remnants - Respawn
+Event(4008210, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100210, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(14500860, OFF);
+    SetEventFlag(14500861, OFF);
+    SetEventFlag(14500862, OFF);
+    SetEventFlag(9323, OFF);
+    SetEventFlag(6323, OFF);
+    SetEventFlag(14500006, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(4502957);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(45, 0, 4500981);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Demon Prince - Respawn
+Event(4008220, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100220, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(15000800, OFF);
+    SetEventFlag(9324, OFF);
+    SetEventFlag(6324, OFF);
+    SetEventFlag(15000000, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(5002953);
+  
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(50, 0, 5000980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Darkeater Midir - Respawn
+Event(4008230, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100230, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(15100850, OFF);
+    SetEventFlag(6326, OFF);
+    SetEventFlag(9326, OFF);
+    SetEventFlag(15100001, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(5102953);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(51, 0, 5100980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Slave Knight Gael - Respawn
+Event(4008240, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100240, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+
+    // Flags
+    SetEventFlag(15110800, OFF);
+    SetEventFlag(6327, OFF);
+    SetEventFlag(9327, OFF);
+    SetEventFlag(15110000, OFF);
+    
+    // Warp Player
+    SetPlayerRespawnPoint(5112951);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(51, 1, 5110980);
+    
+    EndUnconditionally(EventEndType.End);
+});
+
+// Halflight - Respawn
+Event(4008250, Default, function() {
+    IfCharacterHasSpeffect(AND_01, 10000, 260100250, true, ComparisonType.Equal, 1);
+    IfConditionGroup(MAIN, PASS, AND_01);
+    
+    // Flags
+    SetEventFlag(15100800, OFF);
+    SetEventFlag(6325, OFF);
+    SetEventFlag(9325, OFF);
+    SetEventFlag(9003, ON); // Reset flag
+    
+    // Warp Player
+    SetPlayerRespawnPoint(5102953);
+    
+    WaitFixedTimeFrames(1);
+    SaveRequest(0);
+    WaitFixedTimeFrames(1);
+    
+    WarpPlayer(51, 0, 5100981);
+    
+    EndUnconditionally(EventEndType.End);
+});
