@@ -4934,6 +4934,12 @@ Event(20009300, Default, function() {
     SetEventFlag(25001024, OFF); // Slave Knight Gael
     SetEventFlag(25001025, OFF); // Halflight
     
+    // Boss Rush
+    SetEventFlag(25009500, OFF); 
+    SetEventFlag(25009501, OFF); 
+    SetEventFlag(25009502, OFF); 
+    SetEventFlag(25009503, OFF); 
+    
     SetEventFlag(25000099, ON); // Execution flag
 });
 
@@ -4987,6 +4993,19 @@ Event(20020000, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    WaitFixedTimeSeconds(1);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100020); // Vordt
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5039,6 +5058,17 @@ Event(20020001, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100030); // Curse-rotted Greatwood
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5091,6 +5121,17 @@ Event(20020002, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100040); // Crystal Sage
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5143,6 +5184,17 @@ Event(20020003, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200310);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100050); // Deacons of the Deep
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5195,6 +5247,17 @@ Event(20020004, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200310);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100060); // Abyss Watchers
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5247,6 +5310,17 @@ Event(20020005, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100070); // High Lord Wolnir
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5299,6 +5373,17 @@ Event(20020006, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100080); // Old Demon King
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5351,6 +5436,17 @@ Event(20020007, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200310);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100090); // Pontiff Sulyvahn
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5403,6 +5499,17 @@ Event(20020008, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100100); // Aldrich
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5455,6 +5562,17 @@ Event(20020009, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100110); // Yhorm
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5507,6 +5625,17 @@ Event(20020010, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100120); // Dancer
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5559,6 +5688,17 @@ Event(20020011, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100130); // Oceiros
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5611,6 +5751,17 @@ Event(20020012, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100140); // Dragonslayer Armour
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5663,6 +5814,17 @@ Event(20020013, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100150); // Ancient Wyvern
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5715,6 +5877,17 @@ Event(20020014, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100160); // Nameless King
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5767,6 +5940,17 @@ Event(20020015, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100170); // Champion Gundyr
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5819,6 +6003,17 @@ Event(20020016, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100180); // Twin Princes
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5871,6 +6066,17 @@ Event(20020017, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100210); // Lordran Remnants
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5923,6 +6129,17 @@ Event(20020018, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    WarpPlayer(40, 0, 4000970);
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -5975,6 +6192,17 @@ Event(20020019, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100220); // Demon Prince
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -6027,6 +6255,17 @@ Event(20020020, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100200); // Sister Friede
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -6079,6 +6318,17 @@ Event(20020021, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100250); // Halflight
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -6131,6 +6381,17 @@ Event(20020022, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100240); // Slave Knight Gael
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -6183,6 +6444,17 @@ Event(20020023, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
+    
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100190); // Soul of Cinder
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -6236,6 +6508,16 @@ Event(20020024, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
     
+    // Boss Rush - Boss Index
+    IncrementEventValue(25009900, 32, 25);
+    
+    // Boss Rush - Standard
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
+    SetSpeffect(10000, 260100230); // Midir
+    
+    // Boss Rush - Random
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetSpeffect(10000, 260100300); // Random
 });
 
 //----------------------------------------------
@@ -6371,7 +6653,6 @@ Event(20020115, Default, function() {
 //----------------------------------------------
 Event(20020116, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
 });
 
 //----------------------------------------------

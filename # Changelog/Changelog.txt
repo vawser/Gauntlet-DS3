@@ -25,3 +25,51 @@
 #------------------------------
 # Plan
 #------------------------------
+# ESD
+400001 - Boss Rush Menu
+400505 - Alchemist Jiji - Utility
+400504 - Magnum Ursus - Shop
+400006 - Grave Warden Lillian - Afflictions
+
+#------------------------------
+# Flags
+#------------------------------
+6951 DLC1 ownership flag
+6952 DLC2 ownership flag
+
+# Boss Rush Range
+25009500 Standard Boss Rush
+25009501 Standard Boss Rush - Warp
+25009502 Random Boss Rush
+25009503 Random Boss Rush - Warp
+
+# Boss Killed
+25001001 Corrupted Gundyr
+25001002 Vordt
+25001003 Rotted Greatwood
+25001004 Crystal Sage
+25001005 Deacons
+25001006 Abyss Watchers
+25001007 High Lord Wolnir
+25001008 Old Demon King
+25001009 Pontiff Sulyvahn
+25001010 Aldrich
+25001011 Yhorm
+25001012 Dancer
+25001013 Oceiros
+25001014 Dragonslayer Armour
+25001015 Ancient Wyvern
+25001016 Nameless King
+25001017 Champion Gundyr
+25001018 Twin Princes
+25001019 Cinder
+25001020 Sister Friede
+25001021 Triad
+25001022 Demon Prince
+25001023 Darkeater Midir
+25001024 Slave Knight Gael
+25001025 Halflight
+
+# Event Values
+25009900 Boss Index
+

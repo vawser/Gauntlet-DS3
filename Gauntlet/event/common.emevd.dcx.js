@@ -183,7 +183,7 @@ Event(0, Default, function() {
 });
 
 Event(50, Default, function() {
-    InitializeEvent(0, 231, 0);
+    //InitializeEvent(0, 231, 0);
     InitializeEvent(0, 232, 0);
     InitializeEvent(0, 701, 0);
     InitializeEvent(0, 700, 0);
@@ -1804,6 +1804,11 @@ Event(400001, Default, function() {
     InitializeEvent(0, 400700, 10000); // No Hit State
     InitializeEvent(0, 400800, 10000); // FP Regen
     
+    // Boss Rush 
+    InitializeEvent(0, 400810, 10000, 260100300); // Random Boss
+    InitializeEvent(0, 400820, 0); // Random Boss - Final Boss
+    InitializeEvent(0, 400830, 0); // Darksign
+    
     // Bosses
     InitializeEvent(0, 4008010, 0); // Corrupted Gundyr
     InitializeEvent(0, 4008020, 0); // Vordt of the Boreal Valley
@@ -1874,6 +1879,126 @@ Event(400800, Default, function(X0_4) {
     // Reset
     WaitFixedTimeSeconds(0.2);
     EndUnconditionally(EventEndType.Restart);
+});
+
+// Boss Rush - Random Boss
+Event(400810, Default, function(X0_4, X4_4) {
+    IfCharacterHasSpeffect(MAIN, X0_4, X4_4, true, ComparisonType.Equal, 1);
+    
+    SetEventFlag(25007000, OFF);
+    SetEventFlag(25007001, OFF);
+    SetEventFlag(25007002, OFF);
+    SetEventFlag(25007003, OFF);
+    SetEventFlag(25007004, OFF);
+    SetEventFlag(25007005, OFF);
+    SetEventFlag(25007006, OFF);
+    SetEventFlag(25007007, OFF);
+    SetEventFlag(25007008, OFF);
+    SetEventFlag(25007009, OFF);
+    SetEventFlag(25007010, OFF);
+    SetEventFlag(25007011, OFF);
+    SetEventFlag(25007012, OFF);
+    SetEventFlag(25007013, OFF);
+    SetEventFlag(25007014, OFF);
+    SetEventFlag(25007015, OFF);
+    SetEventFlag(25007016, OFF);
+    SetEventFlag(25007017, OFF);
+    SetEventFlag(25007018, OFF);
+    SetEventFlag(25007019, OFF);
+    SetEventFlag(25007020, OFF);
+    SetEventFlag(25007021, OFF);
+    SetEventFlag(25007022, OFF);
+    SetEventFlag(25007023, OFF);
+    SetEventFlag(25007024, OFF);
+    RandomlySetEventFlagInRange(25007001, 25007024, ON);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007000); // Corrupted Gundyr
+    SetSpeffect(10000, 260100010);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007001); // Vordt
+    SetSpeffect(10000, 260100020);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007002); // Curse-rotted Greatwood
+    SetSpeffect(10000, 260100030);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007003); // Crystal Sage
+    SetSpeffect(10000, 260100040);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007004); // Deacons of the Deep
+    SetSpeffect(10000, 260100050);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007005); // Abyss Watchers
+    SetSpeffect(10000, 260100060);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007006); // High Lord Wolnir
+    SetSpeffect(10000, 260100070);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007007); // Old Demon King
+    SetSpeffect(10000, 260100080);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007008); // Pontiff Sulyvahn
+    SetSpeffect(10000, 260100090);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007009); // Aldrich, Devourer of Gods
+    SetSpeffect(10000, 260100100);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007010); // Yhorm the Giant
+    SetSpeffect(10000, 260100110);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007011); // Dancer of the Boreal Valley
+    SetSpeffect(10000, 260100120);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007012); // Oceiros, the Consumed King
+    SetSpeffect(10000, 260100130);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007013); // Dragonslayer Armour
+    SetSpeffect(10000, 260100140);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007014); // Ancient Wyvern
+    SetSpeffect(10000, 260100150);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007015); // Nameless King
+    SetSpeffect(10000, 260100160);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007016); // Champion Gundyr
+    SetSpeffect(10000, 260100170);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007017); // Twin Princes
+    SetSpeffect(10000, 260100180);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007018); // Soul of Cinder
+    SetSpeffect(10000, 260100190);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007019); // Sister Friede
+    SetSpeffect(10000, 260100200);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007020); // Lordran Remnants
+    SetSpeffect(10000, 260100210);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007021); // Demon Prince
+    SetSpeffect(10000, 260100220);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007022); // Darkeater Midir
+    SetSpeffect(10000, 260100230);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007023); // Slave Knight Gael
+    SetSpeffect(10000, 260100240);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007024); // Halflight, Spear of the Church
+    SetSpeffect(10000, 260100250);
+});
+
+// Boss Rush - Random Boss - Final Boss
+Event(400820, Default, function() {
+    IfEventValue(MAIN, 25009900, 32, ComparisonType.GreaterOrEqual, 25);
+    WarpPlayer(40, 0, 4000970);
+});
+
+// Boss Rush - Random Boss - Final Boss
+Event(400830, Default, function() {
+    IfCharacterHasSpeffect(MAIN, 10000, 160700500, true, ComparisonType.Equal, 1);
+    SetMapCeremony(40, 0, 0);
+    WarpPlayer(40, 0, 4000970);
 });
 
 // No Hit State
@@ -2549,7 +2674,7 @@ Event(4008010, Default, function() {
     SetEventFlag(64000261, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(4002950);
+    //SetPlayerRespawnPoint(4002950);
     SetMapCeremony(40, 0, 0);
     
     WaitFixedTimeFrames(1);
@@ -2572,7 +2697,7 @@ Event(4008020, Default, function() {
     SetEventFlag(6301, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3002958);
+    // SetPlayerRespawnPoint(3002958);
 
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2595,7 +2720,7 @@ Event(4008030, Default, function() {
     SetEventFlag(13100001, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3102953);
+    //SetPlayerRespawnPoint(3102953);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2617,7 +2742,7 @@ Event(4008040, Default, function() {
     SetEventFlag(6306, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3302957);
+    //SetPlayerRespawnPoint(3302957);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2639,7 +2764,7 @@ Event(4008050, Default, function() {
     SetEventFlag(6311, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3502950);
+    //SetPlayerRespawnPoint(3502950);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2662,7 +2787,7 @@ Event(4008060, Default, function() {
     SetEventFlag(13300421, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3302958);
+    //SetPlayerRespawnPoint(3302958);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2686,7 +2811,7 @@ Event(4008070, Default, function() {
     SetEventFlag(63800560, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3802950);
+    //SetPlayerRespawnPoint(3802950);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2708,7 +2833,7 @@ Event(4008080, Default, function() {
     SetEventFlag(6317, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3802952);
+    //SetPlayerRespawnPoint(3802952);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2733,7 +2858,7 @@ Event(4008090, Default, function() {
     SetEventFlag(13700422, OFF); // Lift
     
     // Warp Player
-    SetPlayerRespawnPoint(3702950);
+    //SetPlayerRespawnPoint(3702950);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2756,7 +2881,7 @@ Event(4008100, Default, function() {
     SetEventFlag(13700002, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3702953);
+    //SetPlayerRespawnPoint(3702953);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2778,7 +2903,7 @@ Event(4008110, Default, function() {
     SetEventFlag(6318, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3902952);
+    //SetPlayerRespawnPoint(3902952);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2801,7 +2926,7 @@ Event(4008120, Default, function() {
     SetEventFlag(13000885, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3002955);
+    //SetPlayerRespawnPoint(3002955);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2823,7 +2948,7 @@ Event(4008130, Default, function() {
     SetEventFlag(6302, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3002951);
+    //SetPlayerRespawnPoint(3002951);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2845,7 +2970,7 @@ Event(4008140, Default, function() {
     SetEventFlag(6308, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3012952);
+    //SetPlayerRespawnPoint(3012952);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2867,7 +2992,7 @@ Event(4008150, Default, function() {
     SetEventFlag(6305, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3202950);
+    //SetPlayerRespawnPoint(3202950);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2894,7 +3019,7 @@ Event(4008160, Default, function() {
     SetEventFlag(13200862, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3202952);
+    //SetPlayerRespawnPoint(3202952);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2919,7 +3044,7 @@ Event(4008170, Default, function() {
     SetEventFlag(64000261, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(4002953);
+    //SetPlayerRespawnPoint(4002953);
     SetMapCeremony(40, 0, 10);
     
     WaitFixedTimeFrames(1);
@@ -2943,7 +3068,7 @@ Event(4008180, Default, function() {
     SetEventFlag(13410000, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(3412951);
+    //SetPlayerRespawnPoint(3412951);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2967,7 +3092,7 @@ Event(4008190, Default, function() {
     SetEventFlag(14100002, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(4102951);
+    //SetPlayerRespawnPoint(4102951);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -2991,7 +3116,7 @@ Event(4008200, Default, function() {
     SetEventFlag(14500162, OFF); // Dreg Heap warp
     
     // Warp Player
-    SetPlayerRespawnPoint(4502955);
+    //SetPlayerRespawnPoint(4502955);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -3016,7 +3141,7 @@ Event(4008210, Default, function() {
     SetEventFlag(14500006, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(4502957);
+    //SetPlayerRespawnPoint(4502957);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -3039,7 +3164,7 @@ Event(4008220, Default, function() {
     SetEventFlag(15000000, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(5002953);
+    //SetPlayerRespawnPoint(5002953);
   
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -3062,7 +3187,7 @@ Event(4008230, Default, function() {
     SetEventFlag(15100001, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(5102953);
+    //SetPlayerRespawnPoint(5102953);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -3085,7 +3210,7 @@ Event(4008240, Default, function() {
     SetEventFlag(15110000, OFF);
     
     // Warp Player
-    SetPlayerRespawnPoint(5112951);
+    //SetPlayerRespawnPoint(5112951);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
@@ -3108,7 +3233,7 @@ Event(4008250, Default, function() {
     SetEventFlag(9003, ON); // Reset flag
     
     // Warp Player
-    SetPlayerRespawnPoint(5102953);
+    //SetPlayerRespawnPoint(5102953);
     
     WaitFixedTimeFrames(1);
     SaveRequest(0);
