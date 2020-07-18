@@ -1711,22 +1711,22 @@ Event(400001, Default, function() {
     InitializeEvent(0, 400099, 0); // Crow Trades
     
     // Covenant Material Drops
-    InitializeEvent(0, 400100, 10000, 160100232, 800010000, 800010020); // Thieves' Code
-    InitializeEvent(1, 400100, 10000, 160100242, 800010100, 800010120); // Darkmoon Faithful
-    InitializeEvent(2, 400100, 10000, 160100252, 800010200, 800010220); // Spears of the Church
-    InitializeEvent(3, 400100, 10000, 160100262, 800010300, 800010320); // Watchdogs of Farron
-    InitializeEvent(4, 400100, 10000, 160100272, 800010400, 800010420); // Aldrich Faithful
-    InitializeEvent(5, 400100, 10000, 160100292, 800010500, 800010520); // Warrior of Sunlight
-    InitializeEvent(6, 400100, 10000, 160100302, 800010600, 800010620); // Mound-makers
-    InitializeEvent(7, 400100, 10000, 160100322, 800010700, 800010720); // Rosaria's Fingers
-    InitializeEvent(8, 400100, 10000, 160100332, 800010800, 800010820); // Chaos Servant
-    InitializeEvent(9, 400100, 10000, 160100342, 800010900, 800010920); // Vinheim Scholars
-    InitializeEvent(10, 400100, 10000, 160100352, 800011000, 800011020); // Pilgrims of Dark
-    InitializeEvent(12, 400100, 10000, 160100372, 800011100, 800011120); // Dragon Remnants
-    InitializeEvent(11, 400100, 10000, 160100362, 800011200, 800011220); // Way of White
-    InitializeEvent(13, 400100, 10000, 160100382, 800011300, 800011320); // Blue Sentinels
-    InitializeEvent(14, 400100, 10000, 160100392, 800011400, 800011420); // Way of Blue
-    InitializeEvent(15, 400100, 10000, 160100402, 800011500, 800011520); // Company of Champions
+    //InitializeEvent(0, 400100, 10000, 160100232, 800010000, 800010020); // Thieves' Code
+    //InitializeEvent(1, 400100, 10000, 160100242, 800010100, 800010120); // Darkmoon Faithful
+    //InitializeEvent(2, 400100, 10000, 160100252, 800010200, 800010220); // Spears of the Church
+    //InitializeEvent(3, 400100, 10000, 160100262, 800010300, 800010320); // Watchdogs of Farron
+    //InitializeEvent(4, 400100, 10000, 160100272, 800010400, 800010420); // Aldrich Faithful
+    //InitializeEvent(5, 400100, 10000, 160100292, 800010500, 800010520); // Warrior of Sunlight
+    //InitializeEvent(6, 400100, 10000, 160100302, 800010600, 800010620); // Mound-makers
+    //InitializeEvent(7, 400100, 10000, 160100322, 800010700, 800010720); // Rosaria's Fingers
+    //InitializeEvent(8, 400100, 10000, 160100332, 800010800, 800010820); // Chaos Servant
+    //InitializeEvent(9, 400100, 10000, 160100342, 800010900, 800010920); // Vinheim Scholars
+    //InitializeEvent(10, 400100, 10000, 160100352, 800011000, 800011020); // Pilgrims of Dark
+    //InitializeEvent(12, 400100, 10000, 160100372, 800011100, 800011120); // Dragon Remnants
+    //InitializeEvent(11, 400100, 10000, 160100362, 800011200, 800011220); // Way of White
+    //InitializeEvent(13, 400100, 10000, 160100382, 800011300, 800011320); // Blue Sentinels
+    //InitializeEvent(14, 400100, 10000, 160100392, 800011400, 800011420); // Way of Blue
+    //InitializeEvent(15, 400100, 10000, 160100402, 800011500, 800011520); // Company of Champions
     
     // Weapons
     InitializeEvent(0, 400110, 0); // Pyromancer's Parting Flame

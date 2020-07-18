@@ -25,11 +25,23 @@
 #------------------------------
 # Plan
 #------------------------------
+Add scaling speffects to control difficulty (based on event vlaue) - must normalize bosses first
+Add scaling soul drop amount (based on event value)
+
+Ensure Champion Gundyr map transition works
+
+#------------------------------
 # ESD
+#------------------------------
 400001 - Boss Rush Menu
 400505 - Alchemist Jiji - Utility
 400504 - Magnum Ursus - Shop
 400006 - Grave Warden Lillian - Afflictions
+
+#------------------------------
+# Event Values
+#------------------------------
+25009900 Boss Progress Index
 
 #------------------------------
 # Flags
@@ -70,6 +82,5 @@
 25001024 Slave Knight Gael
 25001025 Halflight
 
-# Event Values
-25009900 Boss Index
+
 
