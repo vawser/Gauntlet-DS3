@@ -1808,6 +1808,8 @@ Event(400001, Default, function() {
     InitializeEvent(0, 400810, 10000, 260100300); // Random Boss
     InitializeEvent(0, 400820, 0); // Random Boss - Final Boss
     InitializeEvent(0, 400830, 0); // Darksign
+    InitializeEvent(0, 400840, 0); // Pre-boss Monitor
+    InitializeEvent(0, 400850, 0); // Player Death Monitor
     
     // Bosses
     InitializeEvent(0, 4008010, 0); // Corrupted Gundyr
@@ -1991,14 +1993,57 @@ Event(400810, Default, function(X0_4, X4_4) {
 // Boss Rush - Random Boss - Final Boss
 Event(400820, Default, function() {
     IfEventValue(MAIN, 25009900, 32, ComparisonType.GreaterOrEqual, 25);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
+    
+    SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
 });
 
-// Boss Rush - Random Boss - Final Boss
+// Boss Rush - Darksign
 Event(400830, Default, function() {
     IfCharacterHasSpeffect(MAIN, 10000, 160700500, true, ComparisonType.Equal, 1);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
+    
     SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
+});
+
+// Boss Rush - Pre-boss Monitor
+Event(400840, Default, function() {
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009510);
+    
+    DisplayEpitaphMessage(98002000);
+    
+    WaitFixedTimeSeconds(30);
+    
+    // If in Boss fight, just end event
+    IfCharacterHasSpeffect(AND_01, 10000, 260300100, true, ComparisonType.Equal, 1);
+    GotoIfConditionGroupStateUncompiled(Label.LABEL1, PASS, AND_01);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
+    
+    SetMapCeremony(40, 0, 0);
+    WarpPlayer(40, 0, 4000970);
+    
+    Label1();
+    EndUnconditionally(EventEndType.End);
+});
+
+// Boss Rush - Player Death Monitor
+Event(400850, Default, function() {
+    IfCharacterHPRatio(MAIN, 10000, ComparisonType.LessOrEqual, 0, ComparisonType.Equal, 1);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
 });
 
 // No Hit State

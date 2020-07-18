@@ -4994,6 +4994,8 @@ Event(20020000, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     WaitFixedTimeSeconds(1);
     
     // Boss Rush - Boss Index
@@ -5059,6 +5061,8 @@ Event(20020001, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -5121,6 +5125,8 @@ Event(20020002, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -5185,6 +5191,8 @@ Event(20020003, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200310);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -5247,6 +5255,8 @@ Event(20020004, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200310);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -5311,6 +5321,8 @@ Event(20020005, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -5373,6 +5385,8 @@ Event(20020006, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -5437,6 +5451,8 @@ Event(20020007, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200310);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -5499,6 +5515,8 @@ Event(20020008, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -5563,6 +5581,8 @@ Event(20020009, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -5625,6 +5645,8 @@ Event(20020010, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -5689,6 +5711,8 @@ Event(20020011, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -5751,6 +5775,8 @@ Event(20020012, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -5815,6 +5841,8 @@ Event(20020013, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -5877,6 +5905,8 @@ Event(20020014, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200300);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -5941,6 +5971,8 @@ Event(20020015, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -6003,6 +6035,8 @@ Event(20020016, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200320);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -6067,6 +6101,8 @@ Event(20020017, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -6129,6 +6165,8 @@ Event(20020018, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -6193,6 +6231,8 @@ Event(20020019, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -6255,6 +6295,8 @@ Event(20020020, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -6319,6 +6361,8 @@ Event(20020021, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -6381,6 +6425,8 @@ Event(20020022, Default, function() {
     // Curse of Impermanence
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
@@ -6445,6 +6491,8 @@ Event(20020023, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200340);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -6508,6 +6556,8 @@ Event(20020024, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
     AwardItemLot(800200330);
     
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
     // Boss Rush - Boss Index
     IncrementEventValue(25009900, 32, 25);
     
@@ -6526,6 +6576,7 @@ Event(20020024, Default, function() {
 Event(20020100, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6533,7 +6584,8 @@ Event(20020100, Default, function() {
 //----------------------------------------------
 Event(20020101, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
+   
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6542,6 +6594,7 @@ Event(20020101, Default, function() {
 Event(20020102, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6550,6 +6603,7 @@ Event(20020102, Default, function() {
 Event(20020103, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6558,6 +6612,7 @@ Event(20020103, Default, function() {
 Event(20020104, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6566,6 +6621,7 @@ Event(20020104, Default, function() {
 Event(20020105, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6574,6 +6630,7 @@ Event(20020105, Default, function() {
 Event(20020106, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6582,6 +6639,7 @@ Event(20020106, Default, function() {
 Event(20020107, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6590,6 +6648,7 @@ Event(20020107, Default, function() {
 Event(20020108, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6598,6 +6657,7 @@ Event(20020108, Default, function() {
 Event(20020109, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6605,7 +6665,8 @@ Event(20020109, Default, function() {
 //----------------------------------------------
 Event(20020110, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-   
+    
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6613,7 +6674,8 @@ Event(20020110, Default, function() {
 //----------------------------------------------
 Event(20020111, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
+   
+    SetSpeffect(10000, 260300100); // Set In Bossfight 
 });
 
 //----------------------------------------------
@@ -6622,6 +6684,7 @@ Event(20020111, Default, function() {
 Event(20020112, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6630,6 +6693,7 @@ Event(20020112, Default, function() {
 Event(20020113, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6638,6 +6702,7 @@ Event(20020113, Default, function() {
 Event(20020114, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6646,6 +6711,7 @@ Event(20020114, Default, function() {
 Event(20020115, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6653,6 +6719,8 @@ Event(20020115, Default, function() {
 //----------------------------------------------
 Event(20020116, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6661,6 +6729,7 @@ Event(20020116, Default, function() {
 Event(20020117, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6669,6 +6738,7 @@ Event(20020117, Default, function() {
 Event(20020118, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6677,6 +6747,7 @@ Event(20020118, Default, function() {
 Event(20020119, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6685,6 +6756,7 @@ Event(20020119, Default, function() {
 Event(20020120, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6693,6 +6765,7 @@ Event(20020120, Default, function() {
 Event(20020121, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6701,6 +6774,7 @@ Event(20020121, Default, function() {
 Event(20020122, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6709,6 +6783,7 @@ Event(20020122, Default, function() {
 Event(20020123, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------
@@ -6717,6 +6792,7 @@ Event(20020123, Default, function() {
 Event(20020124, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
 });
 
 //----------------------------------------------

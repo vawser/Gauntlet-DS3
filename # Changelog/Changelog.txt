@@ -30,6 +30,9 @@ Add scaling soul drop amount (based on event value)
 
 Ensure Champion Gundyr map transition works
 
+Setup the boss entrance areas
+SetSpeffect(10000, 260300100); // Set In Bossfight
+
 #------------------------------
 # ESD
 #------------------------------
@@ -54,6 +57,8 @@ Ensure Champion Gundyr map transition works
 25009501 Standard Boss Rush - Warp
 25009502 Random Boss Rush
 25009503 Random Boss Rush - Warp
+
+25009510 Boss Rush Active
 
 # Boss Killed
 25001001 Corrupted Gundyr
