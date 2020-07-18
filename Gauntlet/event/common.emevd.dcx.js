@@ -1805,11 +1805,11 @@ Event(400001, Default, function() {
     InitializeEvent(0, 400800, 10000); // FP Regen
     
     // Boss Rush 
-    InitializeEvent(0, 400810, 10000, 260100300); // Random Boss
-    InitializeEvent(0, 400820, 0); // Random Boss - Final Boss
-    InitializeEvent(0, 400830, 0); // Darksign
-    InitializeEvent(0, 400840, 0); // Pre-boss Monitor
-    InitializeEvent(0, 400850, 0); // Player Death Monitor
+    InitializeEvent(0, 4009000, 0); // Random Boss
+    InitializeEvent(0, 4009001, 0); // Random Boss - Final Boss
+    InitializeEvent(0, 4009002, 0); // Darksign
+    InitializeEvent(0, 4009003, 0); // Pre-boss Monitor
+    InitializeEvent(0, 4009004, 0); // Player Death Monitor
     
     // Bosses
     InitializeEvent(0, 4008010, 0); // Corrupted Gundyr
@@ -1881,169 +1881,6 @@ Event(400800, Default, function(X0_4) {
     // Reset
     WaitFixedTimeSeconds(0.2);
     EndUnconditionally(EventEndType.Restart);
-});
-
-// Boss Rush - Random Boss
-Event(400810, Default, function(X0_4, X4_4) {
-    IfCharacterHasSpeffect(MAIN, X0_4, X4_4, true, ComparisonType.Equal, 1);
-    
-    SetEventFlag(25007000, OFF);
-    SetEventFlag(25007001, OFF);
-    SetEventFlag(25007002, OFF);
-    SetEventFlag(25007003, OFF);
-    SetEventFlag(25007004, OFF);
-    SetEventFlag(25007005, OFF);
-    SetEventFlag(25007006, OFF);
-    SetEventFlag(25007007, OFF);
-    SetEventFlag(25007008, OFF);
-    SetEventFlag(25007009, OFF);
-    SetEventFlag(25007010, OFF);
-    SetEventFlag(25007011, OFF);
-    SetEventFlag(25007012, OFF);
-    SetEventFlag(25007013, OFF);
-    SetEventFlag(25007014, OFF);
-    SetEventFlag(25007015, OFF);
-    SetEventFlag(25007016, OFF);
-    SetEventFlag(25007017, OFF);
-    SetEventFlag(25007018, OFF);
-    SetEventFlag(25007019, OFF);
-    SetEventFlag(25007020, OFF);
-    SetEventFlag(25007021, OFF);
-    SetEventFlag(25007022, OFF);
-    SetEventFlag(25007023, OFF);
-    SetEventFlag(25007024, OFF);
-    RandomlySetEventFlagInRange(25007001, 25007024, ON);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007000); // Corrupted Gundyr
-    SetSpeffect(10000, 260100010);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007001); // Vordt
-    SetSpeffect(10000, 260100020);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007002); // Curse-rotted Greatwood
-    SetSpeffect(10000, 260100030);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007003); // Crystal Sage
-    SetSpeffect(10000, 260100040);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007004); // Deacons of the Deep
-    SetSpeffect(10000, 260100050);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007005); // Abyss Watchers
-    SetSpeffect(10000, 260100060);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007006); // High Lord Wolnir
-    SetSpeffect(10000, 260100070);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007007); // Old Demon King
-    SetSpeffect(10000, 260100080);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007008); // Pontiff Sulyvahn
-    SetSpeffect(10000, 260100090);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007009); // Aldrich, Devourer of Gods
-    SetSpeffect(10000, 260100100);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007010); // Yhorm the Giant
-    SetSpeffect(10000, 260100110);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007011); // Dancer of the Boreal Valley
-    SetSpeffect(10000, 260100120);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007012); // Oceiros, the Consumed King
-    SetSpeffect(10000, 260100130);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007013); // Dragonslayer Armour
-    SetSpeffect(10000, 260100140);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007014); // Ancient Wyvern
-    SetSpeffect(10000, 260100150);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007015); // Nameless King
-    SetSpeffect(10000, 260100160);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007016); // Champion Gundyr
-    SetSpeffect(10000, 260100170);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007017); // Twin Princes
-    SetSpeffect(10000, 260100180);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007018); // Soul of Cinder
-    SetSpeffect(10000, 260100190);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007019); // Sister Friede
-    SetSpeffect(10000, 260100200);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007020); // Lordran Remnants
-    SetSpeffect(10000, 260100210);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007021); // Demon Prince
-    SetSpeffect(10000, 260100220);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007022); // Darkeater Midir
-    SetSpeffect(10000, 260100230);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007023); // Slave Knight Gael
-    SetSpeffect(10000, 260100240);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007024); // Halflight, Spear of the Church
-    SetSpeffect(10000, 260100250);
-});
-
-// Boss Rush - Random Boss - Final Boss
-Event(400820, Default, function() {
-    IfEventValue(MAIN, 25009900, 32, ComparisonType.GreaterOrEqual, 25);
-    
-    SetEventFlag(25009500, OFF); // Standard
-    SetEventFlag(25009502, OFF); // Random
-    SetEventFlag(25009510, OFF); // Active
-    
-    SetMapCeremony(40, 0, 0);
-    WarpPlayer(40, 0, 4000970);
-});
-
-// Boss Rush - Darksign
-Event(400830, Default, function() {
-    IfCharacterHasSpeffect(MAIN, 10000, 160700500, true, ComparisonType.Equal, 1);
-    
-    SetEventFlag(25009500, OFF); // Standard
-    SetEventFlag(25009502, OFF); // Random
-    SetEventFlag(25009510, OFF); // Active
-    
-    SetMapCeremony(40, 0, 0);
-    WarpPlayer(40, 0, 4000970);
-});
-
-// Boss Rush - Pre-boss Monitor
-Event(400840, Default, function() {
-    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009510);
-    
-    DisplayEpitaphMessage(98002000);
-    
-    WaitFixedTimeSeconds(30);
-    
-    // If in Boss fight, just end event
-    IfCharacterHasSpeffect(AND_01, 10000, 260300100, true, ComparisonType.Equal, 1);
-    GotoIfConditionGroupStateUncompiled(Label.LABEL1, PASS, AND_01);
-    
-    SetEventFlag(25009500, OFF); // Standard
-    SetEventFlag(25009502, OFF); // Random
-    SetEventFlag(25009510, OFF); // Active
-    
-    SetMapCeremony(40, 0, 0);
-    WarpPlayer(40, 0, 4000970);
-    
-    Label1();
-    EndUnconditionally(EventEndType.End);
-});
-
-// Boss Rush - Player Death Monitor
-Event(400850, Default, function() {
-    IfCharacterHPRatio(MAIN, 10000, ComparisonType.LessOrEqual, 0, ComparisonType.Equal, 1);
-    
-    SetEventFlag(25009500, OFF); // Standard
-    SetEventFlag(25009502, OFF); // Random
-    SetEventFlag(25009510, OFF); // Active
 });
 
 // No Hit State
@@ -3288,3 +3125,168 @@ Event(4008250, Default, function() {
     
     EndUnconditionally(EventEndType.End);
 });
+
+// Boss Rush - Random Boss
+Event(4009000, Default, function() {
+    IfCharacterHasSpeffect(MAIN, 10000, 260100300, true, ComparisonType.Equal, 1);
+    
+    SetEventFlag(25007000, OFF);
+    SetEventFlag(25007001, OFF);
+    SetEventFlag(25007002, OFF);
+    SetEventFlag(25007003, OFF);
+    SetEventFlag(25007004, OFF);
+    SetEventFlag(25007005, OFF);
+    SetEventFlag(25007006, OFF);
+    SetEventFlag(25007007, OFF);
+    SetEventFlag(25007008, OFF);
+    SetEventFlag(25007009, OFF);
+    SetEventFlag(25007010, OFF);
+    SetEventFlag(25007011, OFF);
+    SetEventFlag(25007012, OFF);
+    SetEventFlag(25007013, OFF);
+    SetEventFlag(25007014, OFF);
+    SetEventFlag(25007015, OFF);
+    SetEventFlag(25007016, OFF);
+    SetEventFlag(25007017, OFF);
+    SetEventFlag(25007018, OFF);
+    SetEventFlag(25007019, OFF);
+    SetEventFlag(25007020, OFF);
+    SetEventFlag(25007021, OFF);
+    SetEventFlag(25007022, OFF);
+    SetEventFlag(25007023, OFF);
+    SetEventFlag(25007024, OFF);
+    RandomlySetEventFlagInRange(25007001, 25007024, ON);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007000); // Corrupted Gundyr
+    SetSpeffect(10000, 260100010);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007001); // Vordt
+    SetSpeffect(10000, 260100020);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007002); // Curse-rotted Greatwood
+    SetSpeffect(10000, 260100030);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007003); // Crystal Sage
+    SetSpeffect(10000, 260100040);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007004); // Deacons of the Deep
+    SetSpeffect(10000, 260100050);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007005); // Abyss Watchers
+    SetSpeffect(10000, 260100060);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007006); // High Lord Wolnir
+    SetSpeffect(10000, 260100070);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007007); // Old Demon King
+    SetSpeffect(10000, 260100080);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007008); // Pontiff Sulyvahn
+    SetSpeffect(10000, 260100090);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007009); // Aldrich, Devourer of Gods
+    SetSpeffect(10000, 260100100);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007010); // Yhorm the Giant
+    SetSpeffect(10000, 260100110);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007011); // Dancer of the Boreal Valley
+    SetSpeffect(10000, 260100120);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007012); // Oceiros, the Consumed King
+    SetSpeffect(10000, 260100130);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007013); // Dragonslayer Armour
+    SetSpeffect(10000, 260100140);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007014); // Ancient Wyvern
+    SetSpeffect(10000, 260100150);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007015); // Nameless King
+    SetSpeffect(10000, 260100160);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007016); // Champion Gundyr
+    SetSpeffect(10000, 260100170);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007017); // Twin Princes
+    SetSpeffect(10000, 260100180);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007018); // Soul of Cinder
+    SetSpeffect(10000, 260100190);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007019); // Sister Friede
+    SetSpeffect(10000, 260100200);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007020); // Lordran Remnants
+    SetSpeffect(10000, 260100210);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007021); // Demon Prince
+    SetSpeffect(10000, 260100220);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007022); // Darkeater Midir
+    SetSpeffect(10000, 260100230);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007023); // Slave Knight Gael
+    SetSpeffect(10000, 260100240);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25007024); // Halflight, Spear of the Church
+    SetSpeffect(10000, 260100250);
+});
+
+// Boss Rush - Random Boss - Final Boss
+Event(4009001, Default, function() {
+    IfEventValue(MAIN, 25009900, 32, ComparisonType.GreaterOrEqual, 25);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
+    
+    SetMapCeremony(40, 0, 0);
+    WarpPlayer(40, 0, 4000970);
+});
+
+// Boss Rush - Darksign
+Event(4009002, Default, function() {
+    IfCharacterHasSpeffect(MAIN, 10000, 160700500, true, ComparisonType.Equal, 1);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
+    
+    SetMapCeremony(40, 0, 0);
+    WarpPlayer(40, 0, 4000970);
+});
+
+// Boss Rush - Pre-boss Monitor
+Event(4009003, Default, function() {
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009510);
+    
+    DisplayEpitaphMessage(98002000);
+    
+    WaitFixedTimeSeconds(30);
+    
+    // If in Boss fight, just end event
+    IfCharacterHasSpeffect(AND_01, 10000, 260300100, true, ComparisonType.Equal, 1);
+    GotoIfConditionGroupStateUncompiled(Label.LABEL1, PASS, AND_01);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
+    
+    SetMapCeremony(40, 0, 0);
+    WarpPlayer(40, 0, 4000970);
+    
+    Label1();
+    EndUnconditionally(EventEndType.End);
+});
+
+// Boss Rush - Player Death Monitor
+Event(4009004, Default, function() {
+    IfCharacterHPRatio(MAIN, 10000, ComparisonType.LessOrEqual, 0, ComparisonType.Equal, 1);
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009510, OFF); // Active
+});
+
+

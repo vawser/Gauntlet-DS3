@@ -30,8 +30,7 @@ Add scaling soul drop amount (based on event value)
 
 Ensure Champion Gundyr map transition works
 
-Setup the boss entrance areas
-SetSpeffect(10000, 260300100); // Set In Bossfight
+Tidy up the maps
 
 #------------------------------
 # ESD
@@ -89,3 +88,4 @@ SetSpeffect(10000, 260300100); // Set In Bossfight
 
 
 
+-9999
