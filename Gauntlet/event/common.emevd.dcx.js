@@ -3277,10 +3277,8 @@ Event(4009001, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
-    WarpPlayer(40, 0, 4000970);
-    
-    WaitFixedTimeSeconds(1);
     SetMapCeremony(40, 0, 0);
+    WarpPlayer(40, 0, 4000970);
 });
 
 // Boss Rush - Darksign
@@ -3291,10 +3289,9 @@ Event(4009002, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
+    SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
     
-    WaitFixedTimeSeconds(1);
-    SetMapCeremony(40, 0, 0);
 });
 
 // Boss Rush - Pre-boss Monitor
@@ -3313,11 +3310,9 @@ Event(4009003, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
-    WarpPlayer(40, 0, 4000970);
-    
-    WaitFixedTimeSeconds(1);
     SetMapCeremony(40, 0, 0);
-    
+    WarpPlayer(40, 0, 4000970);
+
     Label1();
     EndUnconditionally(EventEndType.End);
 });
@@ -3330,6 +3325,5 @@ Event(4009004, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
-    WaitFixedTimeSeconds(3);
     SetMapCeremony(40, 0, 0);
 });
