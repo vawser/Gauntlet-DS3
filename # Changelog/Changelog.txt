@@ -21,29 +21,49 @@
 #------------------------------
 # Changelog
 #------------------------------
-
-#------------------------------
-# Plan
-#------------------------------
-Add scaling speffects to control difficulty (based on event vlaue) - must normalize bosses first
-Add scaling soul drop amount (based on event value)
-
-Ensure Champion Gundyr map transition works
-
-Tidy up the maps
+Add shop gating flags
+Add reverse rush
+Add boss select
 
 #------------------------------
 # ESD
 #------------------------------
-400001 - Boss Rush Menu
-400505 - Alchemist Jiji - Utility
-400504 - Magnum Ursus - Shop
-400006 - Grave Warden Lillian - Afflictions
+400001 - The Nexus
+400505 - Princeling Jiji - Utility
+400504 - Magnum Ursus - Item Shop
+400006 - Matilda the Accursed - Afflictions
 
 #------------------------------
 # Event Values
 #------------------------------
 25009900 Boss Progress Index
+
+# Boss progress flags 
+25009801
+25009802
+25009803
+25009804
+25009805
+25009806
+25009807
+25009808
+25009809
+25009810
+25009811
+25009812
+25009813
+25009814
+25009815
+25009816
+25009817
+25009818
+25009819
+25009820
+25009821
+25009822
+25009823
+25009824
+25009825
 
 #------------------------------
 # Flags
@@ -86,6 +106,3 @@ Tidy up the maps
 25001024 Slave Knight Gael
 25001025 Halflight
 
-
-
--9999

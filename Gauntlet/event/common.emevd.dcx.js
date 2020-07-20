@@ -2551,9 +2551,11 @@ Event(4008010, Default, function() {
     SetEventFlag(14000800, OFF);
     SetEventFlag(9319, OFF);
     SetEventFlag(6319, OFF);
-    SetEventFlag(14000002, OFF);
     SetEventFlag(64000260, OFF);
     SetEventFlag(64000261, OFF);
+    
+    SetEventFlag(14000801, ON);
+    SetEventFlag(14000802, ON);
     
     // Warp Player
     //SetPlayerRespawnPoint(4002950);
@@ -2578,6 +2580,8 @@ Event(4008020, Default, function() {
     SetEventFlag(9301, OFF);
     SetEventFlag(6301, OFF);
     
+    SetEventFlag(13000801, ON);
+    
     // Warp Player
     // SetPlayerRespawnPoint(3002958);
 
@@ -2601,6 +2605,8 @@ Event(4008030, Default, function() {
     SetEventFlag(6303, OFF);
     SetEventFlag(13100001, OFF);
     
+    SetEventFlag(13100801, ON);
+    
     // Warp Player
     //SetPlayerRespawnPoint(3102953);
     
@@ -2622,6 +2628,8 @@ Event(4008040, Default, function() {
     SetEventFlag(13300850, OFF);
     SetEventFlag(9306, OFF);
     SetEventFlag(6306, OFF);
+    
+    SetEventFlag(13300852, ON);
     
     // Warp Player
     //SetPlayerRespawnPoint(3302957);
@@ -2667,6 +2675,8 @@ Event(4008060, Default, function() {
     SetEventFlag(9307, OFF);
     SetEventFlag(6307, OFF);
     SetEventFlag(13300421, OFF);
+    
+    SetEventFlag(13300801, ON);
     
     // Warp Player
     //SetPlayerRespawnPoint(3302958);
@@ -2805,7 +2815,8 @@ Event(4008120, Default, function() {
     SetEventFlag(13000890, OFF);
     SetEventFlag(9300, OFF);
     SetEventFlag(6300, OFF);
-    SetEventFlag(13000885, OFF);
+    //SetEventFlag(13000885, OFF);
+    SetEventFlag(13000885, ON, $LAYERS(0, 1, 2, 3, 4, 5, 6, 7, 8));
     
     // Warp Player
     //SetPlayerRespawnPoint(3002955);
@@ -2872,6 +2883,16 @@ Event(4008150, Default, function() {
     SetEventFlag(13200800, OFF);
     SetEventFlag(9305, OFF);
     SetEventFlag(6305, OFF);
+    SetEventFlag(13200410, ON);
+    SetEventFlag(3204411, ON);
+    SetEventFlag(13200801, ON);
+    SetEventFlag(13200802, ON);
+    
+    SetEventFlag(13200440, OFF);
+    SetEventFlag(13200445, OFF);
+    SetEventFlag(13200446, OFF);
+    
+    SetMapCeremony(32, 0, 0);
     
     // Warp Player
     //SetPlayerRespawnPoint(3202950);
@@ -2894,11 +2915,23 @@ Event(4008160, Default, function() {
     SetEventFlag(13200850, OFF);
     SetEventFlag(9304, OFF);
     SetEventFlag(6304, OFF);
-    SetEventFlag(13200440, OFF);
-    SetEventFlag(13200445, OFF);
-    SetEventFlag(13200855, OFF);
-    SetEventFlag(13200856, OFF);
-    SetEventFlag(13200862, OFF);
+    
+    //SetEventFlag(13200440, OFF);
+    //SetEventFlag(13200445, OFF);
+    //SetEventFlag(13200855, OFF);
+    //SetEventFlag(13200856, OFF);
+    //SetEventFlag(13200862, OFF);
+    
+    SetEventFlag(13200440, ON);
+    SetEventFlag(13200445, ON);
+    SetEventFlag(13200446, ON);
+    
+    SetMapCeremony(32, 0, 10);
+    
+    DeactivateObject(3203850, Enabled);
+    DeactivateObject(3203851, Enabled);
+    DeactivateObject(3203852, Enabled);
+    DeactivateObject(3203853, Enabled);
     
     // Warp Player
     //SetPlayerRespawnPoint(3202952);
@@ -2925,6 +2958,8 @@ Event(4008170, Default, function() {
     SetEventFlag(64000260, OFF);
     SetEventFlag(64000261, OFF);
     
+    SetEventFlag(14000831, ON);
+    
     // Warp Player
     //SetPlayerRespawnPoint(4002953);
     SetMapCeremony(40, 0, 10);
@@ -2948,6 +2983,7 @@ Event(4008180, Default, function() {
     SetEventFlag(9309, OFF);
     SetEventFlag(6309, OFF);
     SetEventFlag(13410000, OFF);
+    SetEventFlag(13410831, ON);
     
     // Warp Player
     //SetPlayerRespawnPoint(3412951);
@@ -2996,6 +3032,7 @@ Event(4008200, Default, function() {
     SetEventFlag(6322, OFF);
     SetEventFlag(14500000, OFF);
     SetEventFlag(14500162, OFF); // Dreg Heap warp
+    SetEventFlag(14500801, ON);
     
     // Warp Player
     //SetPlayerRespawnPoint(4502955);
@@ -3090,6 +3127,8 @@ Event(4008240, Default, function() {
     SetEventFlag(6327, OFF);
     SetEventFlag(9327, OFF);
     SetEventFlag(15110000, OFF);
+    
+    SetEventFlag(15110801, ON);
     
     // Warp Player
     //SetPlayerRespawnPoint(5112951);
@@ -3287,6 +3326,6 @@ Event(4009004, Default, function() {
     SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
+    
+    SetMapCeremony(40, 0, 0);
 });
-
-

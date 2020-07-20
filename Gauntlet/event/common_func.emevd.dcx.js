@@ -4944,1858 +4944,6 @@ Event(20009300, Default, function() {
 });
 
 //----------------------------------------------
-// Corrupted Gundyr - Boss Kill
-//----------------------------------------------
-Event(20020000, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001001, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200000);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200100);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200100);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200200);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200100);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200300);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200100);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200200);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200200);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200100);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200300);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    WaitFixedTimeSeconds(1);
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100020); // Vordt
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Vordt of the Boreal Valley - Boss Kill
-//----------------------------------------------
-Event(20020001, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001002, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200000);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200100);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200100);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200200);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200100);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200300);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200100);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200200);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200200);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200100);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200300);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100030); // Curse-rotted Greatwood
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Curse-rotted Greatwood - Boss Kill
-//----------------------------------------------
-Event(20020002, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001003, ON);// Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200000);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200100);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200100);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200200);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200100);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200300);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200100);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200200);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200200);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200100);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200300);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100040); // Crystal Sage
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Crystal Sage - Boss Kill
-//----------------------------------------------
-Event(20020003, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001004, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200010);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200110);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200110);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200210);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200110);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200310);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200110);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200210);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200210);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200110);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200310);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100050); // Deacons of the Deep
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Deacons of the Deep - Boss Kill
-//----------------------------------------------
-Event(20020004, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001005, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200010);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200110);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200110);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200210);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200110);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200310);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200110);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200210);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200210);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200110);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200310);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100060); // Abyss Watchers
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Abyss Watchers - Boss Kill
-//----------------------------------------------
-Event(20020005, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001006, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200020);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200120);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200120);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200220);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200120);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200320);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200120);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200220);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200220);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200120);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200320);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100070); // High Lord Wolnir
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// High Lord Wolnir - Boss Kill
-//----------------------------------------------
-Event(20020006, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001007, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200000);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200100);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200100);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200200);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200100);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200300);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200100);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200200);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200200);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200100);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200300);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100080); // Old Demon King
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Old Demon King - Boss Kill
-//----------------------------------------------
-Event(20020007, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001008, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200010);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200110);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200110);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200210);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200110);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200310);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200110);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200210);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200210);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200110);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200310);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100090); // Pontiff Sulyvahn
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Pontiff Sulyvahn - Boss Kill
-//----------------------------------------------
-Event(20020008, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001009, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200020);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200120);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200120);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200220);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200120);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200320);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200120);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200220);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200220);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200120);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200320);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100100); // Aldrich
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Aldrich, Devourer of Gods - Boss Kill
-//----------------------------------------------
-Event(20020009, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001010, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200030);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200130);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200130);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200230);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200130);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200330);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200130);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200230);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200230);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200130);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200330);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100110); // Yhorm
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Yhorm the Giant - Boss Kill
-//----------------------------------------------
-Event(20020010, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001011, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200030);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200130);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200130);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200230);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200130);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200330);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200130);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200230);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200230);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200130);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200330);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100120); // Dancer
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Dancer of the Boreal Valley - Boss Kill
-//----------------------------------------------
-Event(20020011, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001012, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200020);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200120);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200120);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200220);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200120);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200320);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200120);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200220);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200220);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200120);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200320);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100130); // Oceiros
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Oceiros, the Consumed King - Boss Kill
-//----------------------------------------------
-Event(20020012, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001013, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200020);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200120);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200120);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200220);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200120);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200320);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200120);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200220);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200220);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200120);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200320);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100140); // Dragonslayer Armour
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Dragonslayer Armour - Boss Kill
-//----------------------------------------------
-Event(20020013, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001014, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200020);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200120);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200120);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200220);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200120);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200320);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200120);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200220);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200220);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200120);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200320);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100150); // Ancient Wyvern
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Ancient Wyvern - Boss Kill
-//----------------------------------------------
-Event(20020014, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001015, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200000);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200100);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200100);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200200);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200100);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200300);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200100);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200200);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200200);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200100);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200300);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100160); // Nameless King
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Nameless King - Boss Kill
-//----------------------------------------------
-Event(20020015, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001016, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200030);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200130);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200130);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200230);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200130);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200330);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200130);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200230);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200230);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200130);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200330);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100170); // Champion Gundyr
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Champion Gundyr - Boss Kill
-//----------------------------------------------
-Event(20020016, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001017, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200020);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200120);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200120);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200220);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200120);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200320);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200120);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200220);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200220);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200120);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200320);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100180); // Twin Princes
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Twin Princes - Boss Kill
-//----------------------------------------------
-Event(20020017, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001018, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200030);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200130);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200130);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200230);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200130);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200330);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200130);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200230);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200230);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200130);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200330);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100210); // Lordran Remnants
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Soul of Cinder - Boss Kill
-//----------------------------------------------
-Event(20020018, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001019, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200040);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200140);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200140);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200240);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200140);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200340);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200140);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200240);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200240);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200140);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200340);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    WarpPlayer(40, 0, 4000970);
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Sister Friede - Boss Kill
-//----------------------------------------------
-Event(20020019, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001020, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200040);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200140);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200140);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200240);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200140);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200340);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200140);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200240);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200240);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200140);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200340);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100220); // Demon Prince
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Lordran Remnants - Boss Kill
-//----------------------------------------------
-Event(20020020, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001021, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200030);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200130);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200130);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200230);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200130);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200330);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200130);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200230);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200230);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200130);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200330);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100200); // Sister Friede
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Demon Prince - Boss Kill
-//----------------------------------------------
-Event(20020021, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001022, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200030);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200130);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200130);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200230);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200130);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200330);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200130);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200230);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200230);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200130);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200330);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100250); // Halflight
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Darkeater Midir - Boss Kill
-//----------------------------------------------
-Event(20020022, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001023, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200040);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200140);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200140);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200240);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200140);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200340);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200140);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200240);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200240);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200140);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200340);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100240); // Slave Knight Gael
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Slave Knight Gael - Boss Kill
-//----------------------------------------------
-Event(20020023, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001024, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200040);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200140);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200140);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200240);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200140);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200340);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200140);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200240);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200240);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200140);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200340);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100190); // Soul of Cinder
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Halflight - Boss Kill
-//----------------------------------------------
-Event(20020024, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    SetEventFlag(25001025, ON); // Boss Killed
-    
-    // No Hit
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25006000);
-    AwardItemLot(800200030);
-    
-    // Curse of Obscurity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000001);
-    AwardItemLot(800200130);
-    
-    // Curse of Vitality
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000002);
-    AwardItemLot(800200130);
-    
-    // Curse of Wrath
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000003);
-    AwardItemLot(800200230);
-    
-    // Curse of Pride
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000004);
-    AwardItemLot(800200130);
-    
-    // Curse of Simplicity
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000005);
-    AwardItemLot(800200330);
-    
-    // Curse of Fortitude
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000006);
-    AwardItemLot(800200130);
-    
-    // Curse of Gluttony
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000007);
-    AwardItemLot(800200230);
-    
-    // Curse of Frailty
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000008);
-    AwardItemLot(800200230);
-    
-    // Curse of Enfeeblement
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000009);
-    AwardItemLot(800200130);
-    
-    // Curse of Impermanence
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25000020);
-    AwardItemLot(800200330);
-    
-    ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    // Boss Rush - Boss Index
-    IncrementEventValue(25009900, 32, 25);
-    
-    // Boss Rush - Standard
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500);
-    SetSpeffect(10000, 260100230); // Midir
-    
-    // Boss Rush - Random
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502);
-    SetSpeffect(10000, 260100300); // Random
-});
-
-//----------------------------------------------
-// Corrupted Gundyr - Boss Start
-//----------------------------------------------
-Event(20020100, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Vordt of the Boreal Valley - Boss Start
-//----------------------------------------------
-Event(20020101, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-   
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Curse-rotted Greatwood - Boss Start
-//----------------------------------------------
-Event(20020102, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Crystal Sage - Boss Start
-//----------------------------------------------
-Event(20020103, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Deacons of the Deep - Boss Start
-//----------------------------------------------
-Event(20020104, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Abyss Watchers - Boss Start
-//----------------------------------------------
-Event(20020105, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// High Lord Wolnir - Boss Start
-//----------------------------------------------
-Event(20020106, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Old Demon King - Boss Start
-//----------------------------------------------
-Event(20020107, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Pontiff Sulyvahn - Boss Start
-//----------------------------------------------
-Event(20020108, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Aldrich, Devourer of Gods - Boss Start
-//----------------------------------------------
-Event(20020109, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Yhorm the Giant - Boss Start
-//----------------------------------------------
-Event(20020110, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Dancer of the Boreal Valley - Boss Start
-//----------------------------------------------
-Event(20020111, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-   
-    SetSpeffect(10000, 260300100); // Set In Bossfight 
-});
-
-//----------------------------------------------
-// Oceiros, the Consumed King - Boss Start
-//----------------------------------------------
-Event(20020112, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Dragonslayer Armour - Boss Start
-//----------------------------------------------
-Event(20020113, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Ancient Wyvern - Boss Start
-//----------------------------------------------
-Event(20020114, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Nameless King - Boss Start
-//----------------------------------------------
-Event(20020115, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Champion Gundyr - Boss Start
-//----------------------------------------------
-Event(20020116, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Twin Princes - Boss Start
-//----------------------------------------------
-Event(20020117, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Soul of Cinder - Boss Start
-//----------------------------------------------
-Event(20020118, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Sister Friede - Boss Start
-//----------------------------------------------
-Event(20020119, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Lordran Remnants - Boss Start
-//----------------------------------------------
-Event(20020120, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Demon Prince - Boss Start
-//----------------------------------------------
-Event(20020121, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Darkeater Midir - Boss Start
-//----------------------------------------------
-Event(20020122, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Slave Knight Gael - Boss Start
-//----------------------------------------------
-Event(20020123, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
-// Halflight - Boss Start
-//----------------------------------------------
-Event(20020124, Default, function() {
-    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
-    
-    SetSpeffect(10000, 260300100); // Set In Bossfight
-});
-
-//----------------------------------------------
 // Region Warp
 // <entity id>, <warp point id>, <trigger region id>, <ffx id>, <dummy poly id>
 //----------------------------------------------
@@ -7193,40 +5341,297 @@ Event(20081210, Default, function(X0_4, X4_4) {
 });
 
 //----------------------------------------------
-// Boss Rush - Add Boss Scaling
+// Boss - Start State
+// <entity id>
 //----------------------------------------------
-Event(20090000, Default, function(X0_4) {
+Event(20082000, Default, function(X0_4) {
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    SetSpeffect(10000, 260300100); // Set In Bossfight
+    
+    // Boss Scaling
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009800);
+    SetSpeffect(X0_4, 260300000);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009801);
+    SetSpeffect(X0_4, 260300001);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009802);
+    SetSpeffect(X0_4, 260300002);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009803);
+    SetSpeffect(X0_4, 260300003);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009804);
+    SetSpeffect(X0_4, 260300004);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009805);
+    SetSpeffect(X0_4, 260300005);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009806);
+    SetSpeffect(X0_4, 260300006);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009807);
+    SetSpeffect(X0_4, 260300007);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009808);
+    SetSpeffect(X0_4, 260300008);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009809);
+    SetSpeffect(X0_4, 260300009);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009810);
+    SetSpeffect(X0_4, 260300010);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009811);
+    SetSpeffect(X0_4, 260300011);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009812);
+    SetSpeffect(X0_4, 260300012);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009813);
+    SetSpeffect(X0_4, 260300013);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009814);
+    SetSpeffect(X0_4, 260300014);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009815);
+    SetSpeffect(X0_4, 260300015);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009816);
+    SetSpeffect(X0_4, 260300016);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009817);
+    SetSpeffect(X0_4, 260300017);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009818);
+    SetSpeffect(X0_4, 260300018);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009819);
+    SetSpeffect(X0_4, 260300019);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009820);
+    SetSpeffect(X0_4, 260300020);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009821);
+    SetSpeffect(X0_4, 260300021);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009822);
+    SetSpeffect(X0_4, 260300022);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009823);
+    SetSpeffect(X0_4, 260300023);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009824);
+    SetSpeffect(X0_4, 260300024);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825);
+    SetSpeffect(X0_4, 260300024);
 });
 
 //----------------------------------------------
-// Boss Rush - Give Scaled Souls
+// Boss - Start State (for adds)
+// <entity id>
 //----------------------------------------------
-Event(20090010, Default, function(X0_4) {
+Event(20082001, Default, function(X0_4) {
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
+    // Boss Scaling
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009800);
+    SetSpeffect(X0_4, 260300000);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009801);
+    SetSpeffect(X0_4, 260300001);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009802);
+    SetSpeffect(X0_4, 260300002);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009803);
+    SetSpeffect(X0_4, 260300003);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009804);
+    SetSpeffect(X0_4, 260300004);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009805);
+    SetSpeffect(X0_4, 260300005);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009806);
+    SetSpeffect(X0_4, 260300006);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009807);
+    SetSpeffect(X0_4, 260300007);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009808);
+    SetSpeffect(X0_4, 260300008);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009809);
+    SetSpeffect(X0_4, 260300009);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009810);
+    SetSpeffect(X0_4, 260300010);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009811);
+    SetSpeffect(X0_4, 260300011);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009812);
+    SetSpeffect(X0_4, 260300012);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009813);
+    SetSpeffect(X0_4, 260300013);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009814);
+    SetSpeffect(X0_4, 260300014);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009815);
+    SetSpeffect(X0_4, 260300015);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009816);
+    SetSpeffect(X0_4, 260300016);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009817);
+    SetSpeffect(X0_4, 260300017);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009818);
+    SetSpeffect(X0_4, 260300018);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009819);
+    SetSpeffect(X0_4, 260300019);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009820);
+    SetSpeffect(X0_4, 260300020);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009821);
+    SetSpeffect(X0_4, 260300021);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009822);
+    SetSpeffect(X0_4, 260300022);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009823);
+    SetSpeffect(X0_4, 260300023);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009824);
+    SetSpeffect(X0_4, 260300024);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825);
+    SetSpeffect(X0_4, 260300024);
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//----------------------------------------------
+// Boss - End State
+// <entity id>, <boss kill flag id>, <speffect id>
+//----------------------------------------------
+Event(20082010, Default, function(X0_4, X4_4, X8_4) {
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    SetEventFlag(X4_4, ON);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
+    // Update Boss Progress
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009824);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009825, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009823);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009824, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009822);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009823, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009821);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009822, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009820);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009821, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009819);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009820, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009818);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009819, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009817);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009818, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009816);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009817, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009815);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009816, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009814);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009815, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009813);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009814, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009812);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009813, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009811);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009812, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009810);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009811, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009809);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009810, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009808);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009809, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009807);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009808, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009806);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009807, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009805);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009806, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009804);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009805, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009803);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009804, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009802);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009803, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009801);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009802, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009800);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009801, ON);
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009825); // Return to Nexus if last boss
+    WarpPlayer(40, 0, 4000970); // Return to Nexus
+    SkipIfEventFlag(4, ON, TargetEventFlagType.EventFlag, 25009825); // Skip boss rush advancement if last boss 
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500); // Boss Rush - Standard
+    SetSpeffect(10000, X8_4); // Next Boss
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502); // Boss Rush - Random
+    SetSpeffect(10000, 260100300); // Random
+});
