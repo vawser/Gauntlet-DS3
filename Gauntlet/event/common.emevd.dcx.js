@@ -1682,10 +1682,8 @@ Event(400001, Default, function() {
     InitializeEvent(8, 400021, 25000009, 250001800, 250001801); // Curse of Enfeeblement
     InitializeEvent(9, 400021, 25000020, 250001900, 250001901); // Curse of Impermanence
     
-    // Marks - Enable
-    InitializeEvent(10, 400021, 25000100, 250003000, 250003001); // Mark of Sanguis
-    InitializeEvent(11, 400023, 25000101, 250003100, 250003101, 30, 0); // Mark of Canis
-    InitializeEvent(12, 400023, 25000102, 250003200, 250003201, 33, 0); // Mark of Piscis
+    // Pacts
+    InitializeEvent(10, 400021, 25001100, 250003000, 250003001); // Pact of Restoration
     
     // Curses - Disable
     InitializeEvent(0, 400022, 25000008, 250001200, 250001201); // Curse of Frailty
@@ -1699,10 +1697,8 @@ Event(400001, Default, function() {
     InitializeEvent(8, 400022, 25000009, 250001800, 250001801); // Curse of Enfeeblement
     InitializeEvent(9, 400022, 25000020, 250001900, 250001901); // Curse of Impermanence
     
-    // Marks - Disable
-    InitializeEvent(10, 400022, 25000100, 250003000, 250003001); // Mark of Sanguis
-    InitializeEvent(11, 400022, 25000101, 250003100, 250003101); // Mark of Canis
-    InitializeEvent(11, 400022, 25000102, 250003200, 250003201); // Mark of Piscis
+    // Pacts
+    InitializeEvent(10, 400022, 25001100, 250003000, 250003001); // Pact of Restoration
     
     // Curse of Impermanence
     InitializeEvent(0, 400120, 10000, 250001900, 25000190, 250001903);
@@ -2815,7 +2811,8 @@ Event(4008120, Default, function() {
     SetEventFlag(13000890, OFF);
     SetEventFlag(9300, OFF);
     SetEventFlag(6300, OFF);
-    //SetEventFlag(13000885, OFF);
+    
+    SetEventFlag(13000896, ON);
     SetEventFlag(13000885, ON, $LAYERS(0, 1, 2, 3, 4, 5, 6, 7, 8));
     
     // Warp Player
@@ -3280,8 +3277,10 @@ Event(4009001, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
-    SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
+    
+    WaitFixedTimeSeconds(1);
+    SetMapCeremony(40, 0, 0);
 });
 
 // Boss Rush - Darksign
@@ -3292,8 +3291,10 @@ Event(4009002, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
-    SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
+    
+    WaitFixedTimeSeconds(1);
+    SetMapCeremony(40, 0, 0);
 });
 
 // Boss Rush - Pre-boss Monitor
@@ -3302,7 +3303,7 @@ Event(4009003, Default, function() {
     
     DisplayEpitaphMessage(98002000);
     
-    WaitFixedTimeSeconds(30);
+    WaitFixedTimeSeconds(60);
     
     // If in Boss fight, just end event
     IfCharacterHasSpeffect(AND_01, 10000, 260300100, true, ComparisonType.Equal, 1);
@@ -3312,8 +3313,10 @@ Event(4009003, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
-    SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
+    
+    WaitFixedTimeSeconds(1);
+    SetMapCeremony(40, 0, 0);
     
     Label1();
     EndUnconditionally(EventEndType.End);
@@ -3327,5 +3330,6 @@ Event(4009004, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
     
+    WaitFixedTimeSeconds(3);
     SetMapCeremony(40, 0, 0);
 });

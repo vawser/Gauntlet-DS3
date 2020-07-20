@@ -5526,106 +5526,136 @@ Event(20082010, Default, function(X0_4, X4_4, X8_4) {
     
     ClearSpeffect(10000, 260300100); // Clear In Bossfight
     
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25001100);
+    SetSpeffect(10000, 250003002);
+    
+    WaitFixedTimeSeconds(8);
+    
     // Update Boss Progress
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009824);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009824);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009825, ON);
+    SetEventFlag(25009725, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009823);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009823);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009824, ON);
+    SetEventFlag(25009724, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009822);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009822);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009823, ON);
+    SetEventFlag(25009723, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009821);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009821);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009822, ON);
+    SetEventFlag(25009722, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009820);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009820);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009821, ON);
+    SetEventFlag(25009721, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009819);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009819);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009820, ON);
+    SetEventFlag(25009720, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009818);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009818);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009819, ON);
+    SetEventFlag(25009719, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009817);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009817);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009818, ON);
+    SetEventFlag(25009718, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009816);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009816);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009817, ON);
+    SetEventFlag(25009717, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009815);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009815);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009816, ON);
+    SetEventFlag(25009716, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009814);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009814);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009815, ON);
+    SetEventFlag(25009715, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009813);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009813);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009814, ON);
+    SetEventFlag(25009714, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009812);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009812);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009813, ON);
+    SetEventFlag(25009713, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009811);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009811);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009812, ON);
+    SetEventFlag(25009712, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009810);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009810);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009811, ON);
+    SetEventFlag(25009711, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009809);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009809);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009810, ON);
+    SetEventFlag(25009710, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009808);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009808);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009809, ON);
+    SetEventFlag(25009709, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009807);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009807);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009808, ON);
+    SetEventFlag(25009708, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009806);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009806);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009807, ON);
+    SetEventFlag(25009707, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009805);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009805);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009806, ON);
+    SetEventFlag(25009706, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009804);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009804);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009805, ON);
+    SetEventFlag(25009705, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009803);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009803);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009804, ON);
+    SetEventFlag(25009704, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009802);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009802);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009803, ON);
+    SetEventFlag(25009703, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009801);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009801);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009802, ON);
+    SetEventFlag(25009702, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009800);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009800);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009801, ON);
+    SetEventFlag(25009701, ON);
     
     SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009825); // Return to Nexus if last boss
     WarpPlayer(40, 0, 4000970); // Return to Nexus

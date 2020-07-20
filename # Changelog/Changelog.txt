@@ -21,7 +21,6 @@
 #------------------------------
 # Changelog
 #------------------------------
-Add shop gating flags
 Add reverse rush
 Add boss select
 
@@ -29,41 +28,9 @@ Add boss select
 # ESD
 #------------------------------
 400001 - The Nexus
-400505 - Princeling Jiji - Utility
+400505 - Princeling Ricardo - Utility
 400504 - Magnum Ursus - Item Shop
 400006 - Matilda the Accursed - Afflictions
-
-#------------------------------
-# Event Values
-#------------------------------
-25009900 Boss Progress Index
-
-# Boss progress flags 
-25009801
-25009802
-25009803
-25009804
-25009805
-25009806
-25009807
-25009808
-25009809
-25009810
-25009811
-25009812
-25009813
-25009814
-25009815
-25009816
-25009817
-25009818
-25009819
-25009820
-25009821
-25009822
-25009823
-25009824
-25009825
 
 #------------------------------
 # Flags
@@ -71,11 +38,17 @@ Add boss select
 6951 DLC1 ownership flag
 6952 DLC2 ownership flag
 
+25000011 NG+1
+25000012 NG+2
+25000013 NG+3
+25000014 NG+4
+25000015 NG+5
+
 # Boss Rush Range
-25009500 Standard Boss Rush
-25009501 Standard Boss Rush - Warp
-25009502 Random Boss Rush
-25009503 Random Boss Rush - Warp
+25009500 Standard Rush
+25009501 Standard Rush - Warp
+25009502 Random Rush
+25009503 Random Rush - Warp
 
 25009510 Boss Rush Active
 
@@ -98,11 +71,66 @@ Add boss select
 25001016 Nameless King
 25001017 Champion Gundyr
 25001018 Twin Princes
-25001019 Cinder
+25001021 Lordran Remnants
 25001020 Sister Friede
-25001021 Triad
 25001022 Demon Prince
+25001025 Halflight
 25001023 Darkeater Midir
 25001024 Slave Knight Gael
-25001025 Halflight
+25001019 Cinder
 
+# Pacts
+25001100 Pact of Restoration
+
+# Progress
+25009801 Current Progress 1
+25009802 Current Progress 2
+25009803 Current Progress 3
+25009804 Current Progress 4
+25009805 Current Progress 5
+25009806 Current Progress 6
+25009807 Current Progress 7
+25009808 Current Progress 8
+25009809 Current Progress 9
+25009810 Current Progress 10
+25009811 Current Progress 11
+25009812 Current Progress 12
+25009813 Current Progress 13
+25009814 Current Progress 14
+25009815 Current Progress 15
+25009816 Current Progress 16
+25009817 Current Progress 17
+25009818 Current Progress 18
+25009819 Current Progress 19
+25009820 Current Progress 20
+25009821 Current Progress 21
+25009822 Current Progress 22
+25009823 Current Progress 23
+25009824 Current Progress 24
+25009825 Current Progress 25
+
+25009701 Saved Progress 1
+25009702 Saved Progress 2
+25009703 Saved Progress 3
+25009704 Saved Progress 4
+25009705 Saved Progress 5 # Exotic Weapons
+25009706 Saved Progress 6
+25009707 Saved Progress 7
+25009708 Saved Progress 8 
+25009709 Saved Progress 9
+25009710 Saved Progress 10 # Draconic Weapons / Advanced Spells
+25009711 Saved Progress 11
+25009712 Saved Progress 12
+25009713 Saved Progress 13
+25009714 Saved Progress 14
+25009715 Saved Progress 15 # Legendary Weapons
+25009716 Saved Progress 16
+25009717 Saved Progress 17
+25009718 Saved Progress 18
+25009719 Saved Progress 19
+25009720 Saved Progress 20
+25009721 Saved Progress 21
+25009722 Saved Progress 22
+25009723 Saved Progress 23
+25009724 Saved Progress 24
+25009725 Saved Progress 25
