@@ -3275,6 +3275,7 @@ Event(4009001, Default, function() {
     
     SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009504, OFF); // Progressive
     SetEventFlag(25009510, OFF); // Active
 
     SetMapCeremony(40, 0, 0);
@@ -3287,6 +3288,7 @@ Event(4009002, Default, function() {
     
     SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009504, OFF); // Progressive
     SetEventFlag(25009510, OFF); // Active
     
     SetMapCeremony(40, 0, 0);
@@ -3299,14 +3301,15 @@ Event(4009003, Default, function() {
     
     SetEventFlag(25009511, OFF);
     
-    DisplayEpitaphMessage(98002000);
+    //DisplayEpitaphMessage(98002000);
     
     WaitFixedTimeSeconds(60);
     
     // Skip return if boss has been awoken
-    SkipIfEventFlag(5, ON, TargetEventFlagType.EventFlag, 25009511);
+    SkipIfEventFlag(6, ON, TargetEventFlagType.EventFlag, 25009511);
     SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009504, OFF); // Progressive
     SetEventFlag(25009510, OFF); // Active
     SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
@@ -3320,6 +3323,7 @@ Event(4009004, Default, function() {
     
     SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009504, OFF); // Progressive
     SetEventFlag(25009510, OFF); // Active
     
     SetMapCeremony(40, 0, 0);

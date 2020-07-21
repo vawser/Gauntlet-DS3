@@ -22,9 +22,6 @@
 # Changelog
 #------------------------------
 Add boss select
-Add progressive rush
-
-
 
 #------------------------------
 # ESD
@@ -33,6 +30,7 @@ Add progressive rush
 400505 - Princeling Ricardo - Utility
 400504 - Magnum Ursus - Item Shop
 400506 - Lord Zakar - Utility
+400507 - Helpful Harry
 400006 - Matilda the Accursed - Curses
 
 #------------------------------
@@ -52,6 +50,8 @@ Add progressive rush
 25009501 Standard Rush - Warp
 25009502 Random Rush
 25009503 Random Rush - Warp
+25009504 Progressive Rush
+25009505 Progressive Rush - Warp
 
 25009510 Boss Rush Active
 25009511 Disable Nexus Return
@@ -88,81 +88,55 @@ Add progressive rush
 # Pacts
 25001100 Pact of Restoration
 
-# Progress
-25009801 Current Progress 1
-25009802 Current Progress 2
-25009803 Current Progress 3
-25009804 Current Progress 4
-25009805 Current Progress 5
-25009806 Current Progress 6
-25009807 Current Progress 7
-25009808 Current Progress 8
-25009809 Current Progress 9
-25009810 Current Progress 10
-25009811 Current Progress 11
-25009812 Current Progress 12
-25009813 Current Progress 13
-25009814 Current Progress 14
-25009815 Current Progress 15
-25009816 Current Progress 16
-25009817 Current Progress 17
-25009818 Current Progress 18
-25009819 Current Progress 19
-25009820 Current Progress 20
-25009821 Current Progress 21
-25009822 Current Progress 22
-25009823 Current Progress 23
-25009824 Current Progress 24
-25009825 Current Progress 25
+25009701 Unlock Level 1
+25009702 Unlock Level 2
+25009703 Unlock Level 3
+25009704 Unlock Level 4
+25009705 Unlock Level 5 # Exotic Weapons
+25009706 Unlock Level 6
+25009707 Unlock Level 7
+25009708 Unlock Level 8 
+25009709 Unlock Level 9
+25009710 Unlock Level 10 # Draconic Weapons / Advanced Spells
+25009711 Unlock Level 11
+25009712 Unlock Level 12
+25009713 Unlock Level 13
+25009714 Unlock Level 14
+25009715 Unlock Level 15 # Legendary Weapons
+25009716 Unlock Level 16
+25009717 Unlock Level 17
+25009718 Unlock Level 18
+25009719 Unlock Level 19
+25009720 Unlock Level 20
+25009721 Unlock Level 21
+25009722 Unlock Level 22
+25009723 Unlock Level 23
+25009724 Unlock Level 24
+25009725 Unlock Level 25
 
-25009701 Saved Progress 1
-25009702 Saved Progress 2
-25009703 Saved Progress 3
-25009704 Saved Progress 4
-25009705 Saved Progress 5 # Exotic Weapons
-25009706 Saved Progress 6
-25009707 Saved Progress 7
-25009708 Saved Progress 8 
-25009709 Saved Progress 9
-25009710 Saved Progress 10 # Draconic Weapons / Advanced Spells
-25009711 Saved Progress 11
-25009712 Saved Progress 12
-25009713 Saved Progress 13
-25009714 Saved Progress 14
-25009715 Saved Progress 15 # Legendary Weapons
-25009716 Saved Progress 16
-25009717 Saved Progress 17
-25009718 Saved Progress 18
-25009719 Saved Progress 19
-25009720 Saved Progress 20
-25009721 Saved Progress 21
-25009722 Saved Progress 22
-25009723 Saved Progress 23
-25009724 Saved Progress 24
-25009725 Saved Progress 25
-
-25009601 Progressive Progress 1
-25009602 Progressive Progress 2
-25009603 Progressive Progress 3
-25009604 Progressive Progress 4
-25009605 Progressive Progress 5 
-25009606 Progressive Progress 6
-25009607 Progressive Progress 7
-25009608 Progressive Progress 8 
-25009609 Progressive Progress 9
-25009610 Progressive Progress 10
-25009611 Progressive Progress 11
-25009612 Progressive Progress 12
-25009613 Progressive Progress 13
-25009614 Progressive Progress 14
-25009615 Progressive Progress 15 
-25009616 Progressive Progress 16
-25009617 Progressive Progress 17
-25009618 Progressive Progress 18
-25009619 Progressive Progress 19
-25009620 Progressive Progress 20
-25009621 Progressive Progress 21
-25009622 Progressive Progress 22
-25009623 Progressive Progress 23
-25009624 Progressive Progress 24
-25009625 Progressive Progress 25
+25009800 Scaling Level 0
+25009801 Scaling Level 1
+25009802 Scaling Level 2
+25009803 Scaling Level 3
+25009804 Scaling Level 4
+25009805 Scaling Level 5
+25009806 Scaling Level 6
+25009807 Scaling Level 7
+25009808 Scaling Level 8
+25009809 Scaling Level 9
+25009810 Scaling Level 10
+25009811 Scaling Level 11
+25009812 Scaling Level 12
+25009813 Scaling Level 13
+25009814 Scaling Level 14
+25009815 Scaling Level 15
+25009816 Scaling Level 16
+25009817 Scaling Level 17
+25009818 Scaling Level 18
+25009819 Scaling Level 19
+25009820 Scaling Level 20
+25009821 Scaling Level 21
+25009822 Scaling Level 22
+25009823 Scaling Level 23
+25009824 Scaling Level 24
+25009825 Scaling Level 25

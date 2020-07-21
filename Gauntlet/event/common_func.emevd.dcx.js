@@ -2020,8 +2020,8 @@ Event(20005434, Restart, function(X0_4, X4_4) {
     ChangeCharacterEnableState(X4_4, Disabled);
     SetCharacterAnimationState(X4_4, Disabled);
     IfCharacterBackreadStatus(MAIN, X0_4, true, ComparisonType.Equal, 1);
-    CreateNPCPart(X0_4, 30, NPCPartType.Part3, 800, 1, 1, false, false);
-    CreateNPCPart(X0_4, 40, NPCPartType.Part4, 800, 1, 1, false, false);
+    CreateNPCPart(X0_4, 30, NPCPartType.Part3, 400, 1, 1, false, false);
+    CreateNPCPart(X0_4, 40, NPCPartType.Part4, 400, 1, 1, false, false);
     IfNPCPartHP(OR_01, X0_4, 30, 0, ComparisonType.LessOrEqual);
     IfNPCPartHP(OR_02, X0_4, 40, 0, ComparisonType.LessOrEqual);
     IfConditionGroup(OR_03, PASS, OR_01);
@@ -5340,6 +5340,7 @@ Event(20081210, Default, function(X0_4, X4_4) {
     SpawnOneshotSFX(TargetEntityType.Character, X4_4, 280, 1060);
     ChangeCharacterEnableState(X4_4, Disabled);
     SetCharacterAIState(X4_4, Disabled);
+
     //SetCharacterTeamType(X4_4, TeamType.StrongEnemy);
     //WaitFixedTimeFrames(1);
     //RequestCharacterAIReplan(X4_4);
@@ -5348,24 +5349,61 @@ Event(20081210, Default, function(X0_4, X4_4) {
 });
 
 //----------------------------------------------
-// Boss - Start State - Fire Once
+// Boss - Start - Standard
 // <entity id>
 //----------------------------------------------
 Event(20082000, Default, function(X0_4, X4_4) {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009500);
     WaitForEventFlag(ON, TargetEventFlagType.EventFlag, X4_4);
     
-    DisplayEpitaphMessage(98002001);
+    //DisplayEpitaphMessage(98002001);
     
     SetEventFlag(25009511, ON); // Kill Nexus return script
     SetSpeffect(10000, 260300100); // Set In Bossfight
+    
+    SetSpeffect(10000, 260300101); // Player Effect
 });
 
 //----------------------------------------------
-// Boss - Start State - Loop
+// Boss - Start - Random
 // <entity id>
 //----------------------------------------------
 Event(20082001, Default, function(X0_4, X4_4) {
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009502);
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, X4_4);
+    
+    //DisplayEpitaphMessage(98002001);
+    
+    SetEventFlag(25009511, ON); // Kill Nexus return script
+    SetSpeffect(10000, 260300100); // Set In Bossfight
+    
+    SetSpeffect(10000, 260300103); // Player Effect
+});
+
+//----------------------------------------------
+// Boss - Start - Progressive
+// <entity id>
+//----------------------------------------------
+Event(20082002, Default, function(X0_4, X4_4) {
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009504);
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, X4_4);
+    
+    //DisplayEpitaphMessage(98002001);
+    
+    SetEventFlag(25009511, ON); // Kill Nexus return script
+    SetSpeffect(10000, 260300100); // Set In Bossfight
+    
+    SetSpeffect(10000, 260300102); // Player Effect
+});
+
+//----------------------------------------------
+// Boss - Apply Scaling
+// <entity id>
+//----------------------------------------------
+Event(20082050, Default, function(X0_4, X4_4) {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     
     // Skip application if boss fight isn't 'active'
@@ -5455,17 +5493,15 @@ Event(20082001, Default, function(X0_4, X4_4) {
 });
 
 //----------------------------------------------
-// Boss - End State
+// Boss - End State - Standard
 // <entity id>, <boss kill flag id>, <speffect id>
 //----------------------------------------------
 Event(20082010, Default, function(X0_4, X4_4, X8_4) {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009500);
     SetEventFlag(X4_4, ON);
     
     ClearSpeffect(10000, 260300100); // Clear In Bossfight
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25001100);
-    SetSpeffect(10000, 250003002);
     
     WaitFixedTimeSeconds(8);
     
@@ -5544,7 +5580,7 @@ Event(20082010, Default, function(X0_4, X4_4, X8_4) {
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009811, ON);
     SetEventFlag(25009711, ON);
-    
+
     SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009809);
     BatchSetEventFlags(25009800, 25009825, OFF);
     SetEventFlag(25009810, ON);
@@ -5596,11 +5632,304 @@ Event(20082010, Default, function(X0_4, X4_4, X8_4) {
     SetEventFlag(25009701, ON);
     
     // Skip boss rush advancement if last boss
-    SkipIfEventFlag(4, ON, TargetEventFlagType.EventFlag, 25009825); 
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500); // Boss Rush - Standard
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25009825);
     SetSpeffect(10000, X8_4); // Next Boss
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502); // Boss Rush - Random
+    
+    // Return to Nexus if last boss in progression
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825); 
+    WarpPlayer(40, 0, 4000970); // Return to Nexus
+});
+
+//----------------------------------------------
+// Boss - End State - Random
+// <entity id>, <boss kill flag id>, <speffect id>
+//----------------------------------------------
+Event(20082011, Default, function(X0_4, X4_4, X8_4) {
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009502);
+    SetEventFlag(X4_4, ON);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+    
+    WaitFixedTimeSeconds(8);
+    
+    // Update Boss Progress
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009824);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009825, ON);
+    SetEventFlag(25009725, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009823);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009824, ON);
+    SetEventFlag(25009724, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009822);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009823, ON);
+    SetEventFlag(25009723, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009821);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009822, ON);
+    SetEventFlag(25009722, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009820);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009821, ON);
+    SetEventFlag(25009721, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009819);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009820, ON);
+    SetEventFlag(25009720, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009818);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009819, ON);
+    SetEventFlag(25009719, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009817);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009818, ON);
+    SetEventFlag(25009718, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009816);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009817, ON);
+    SetEventFlag(25009717, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009815);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009816, ON);
+    SetEventFlag(25009716, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009814);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009815, ON);
+    SetEventFlag(25009715, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009813);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009814, ON);
+    SetEventFlag(25009714, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009812);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009813, ON);
+    SetEventFlag(25009713, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009811);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009812, ON);
+    SetEventFlag(25009712, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009810);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009811, ON);
+    SetEventFlag(25009711, ON);
+
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009809);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009810, ON);
+    SetEventFlag(25009710, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009808);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009809, ON);
+    SetEventFlag(25009709, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009807);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009808, ON);
+    SetEventFlag(25009708, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009806);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009807, ON);
+    SetEventFlag(25009707, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009805);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009806, ON);
+    SetEventFlag(25009706, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009804);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009805, ON);
+    SetEventFlag(25009705, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009803);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009804, ON);
+    SetEventFlag(25009704, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009802);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009803, ON);
+    SetEventFlag(25009703, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009801);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009802, ON);
+    SetEventFlag(25009702, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009800);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009801, ON);
+    SetEventFlag(25009701, ON);
+    
+    // Skip boss rush advancement if last boss
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25009825);
     SetSpeffect(10000, 260100300); // Random
+    
+    // Return to Nexus if last boss in progression
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825); 
+    WarpPlayer(40, 0, 4000970); // Return to Nexus
+});
+
+//----------------------------------------------
+// Boss - End State - Progressive
+// <entity id>, <boss kill flag id>, <speffect id>
+//----------------------------------------------
+Event(20082012, Default, function(X0_4, X4_4, X8_4) {
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009504);
+    SetEventFlag(X4_4, ON);
+    
+    ClearSpeffect(10000, 260300100); // Clear In Bossfight
+
+    WaitFixedTimeSeconds(8);
+    
+    // Update Boss Progress
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009824);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009825, ON);
+    SetEventFlag(25009725, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009823);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009824, ON);
+    SetEventFlag(25009724, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009822);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009823, ON);
+    SetEventFlag(25009723, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009821);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009822, ON);
+    SetEventFlag(25009722, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009820);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009821, ON);
+    SetEventFlag(25009721, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009819);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009820, ON);
+    SetEventFlag(25009720, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009818);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009819, ON);
+    SetEventFlag(25009719, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009817);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009818, ON);
+    SetEventFlag(25009718, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009816);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009817, ON);
+    SetEventFlag(25009717, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009815);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009816, ON);
+    SetEventFlag(25009716, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009814);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009815, ON);
+    SetEventFlag(25009715, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009813);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009814, ON);
+    SetEventFlag(25009714, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009812);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009813, ON);
+    SetEventFlag(25009713, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009811);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009812, ON);
+    SetEventFlag(25009712, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009810);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009811, ON);
+    SetEventFlag(25009711, ON);
+
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009809);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009810, ON);
+    SetEventFlag(25009710, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009808);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009809, ON);
+    SetEventFlag(25009709, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009807);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009808, ON);
+    SetEventFlag(25009708, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009806);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009807, ON);
+    SetEventFlag(25009707, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009805);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009806, ON);
+    SetEventFlag(25009706, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009804);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009805, ON);
+    SetEventFlag(25009705, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009803);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009804, ON);
+    SetEventFlag(25009704, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009802);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009803, ON);
+    SetEventFlag(25009703, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009801);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009802, ON);
+    SetEventFlag(25009702, ON);
+    
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009800);
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009801, ON);
+    SetEventFlag(25009701, ON);
+    
+    // Skip boss rush advancement if last boss
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 25009825);
+    SetSpeffect(10000, X8_4); // Next Boss
     
     // Return to Nexus if last boss in progression
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825); 
@@ -5618,11 +5947,14 @@ Event(20082100, Default, function() {
     SetEventFlag(25009800, ON); // Start progress flag
     
     SetEventFlag(25009501, OFF); // Warp
+    SetEventFlag(25009510, ON); // Rush is Active
+    
     SetEventFlag(25009500, ON); // Standard
-    SetEventFlag(25009510, ON); // Active
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009504, OFF); // Progressive
     
     SetSpeffect(10000, 260100010); // Corrupted Gundyr
-    //SetSpeffect(10000, 260100190); // Debug
+    //SetSpeffect(10000, 260100230); // Debug
 });
 
 //----------------------------------------------
@@ -5636,10 +5968,103 @@ Event(20082101, Default, function() {
     SetEventFlag(25009800, ON); // Start progress flag
     
     SetEventFlag(25009503, OFF); // Warp
+    SetEventFlag(25009510, ON); // Rush is Active
+    
+    SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, ON); // Random
-    SetEventFlag(25009510, ON); // Active
+    SetEventFlag(25009504, OFF); // Progressive
     
     SetSpeffect(10000, 260100300); // Random
+});
+
+//----------------------------------------------
+// Boss Rush - Progressive
+//----------------------------------------------
+Event(20082102, Default, function() {
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, 25009505);
+
+    SetEventFlag(25009505, OFF); // Warp
+    SetEventFlag(25009510, ON); // Rush is Active
+    
+    SetEventFlag(25009500, OFF); // Standard
+    SetEventFlag(25009502, OFF); // Random
+    SetEventFlag(25009504, ON); // Progressive
+    
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009800);
+    SetSpeffect(10000, 260100010);
+    SetEventFlag(25009800, ON); // Start progress flag
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009801);
+    SetSpeffect(10000, 260100020);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009802);
+    SetSpeffect(10000, 260100030);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009803);
+    SetSpeffect(10000, 260100040);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009804);
+    SetSpeffect(10000, 260100050);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009805);
+    SetSpeffect(10000, 260100060);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009806);
+    SetSpeffect(10000, 260100070);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009807);
+    SetSpeffect(10000, 260100080);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009808);
+    SetSpeffect(10000, 260100090);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009809);
+    SetSpeffect(10000, 260100100);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009810);
+    SetSpeffect(10000, 260100110);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009811);
+    SetSpeffect(10000, 260100120);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009812);
+    SetSpeffect(10000, 260100130);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009813);
+    SetSpeffect(10000, 260100140);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009814);
+    SetSpeffect(10000, 260100150);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009815);
+    SetSpeffect(10000, 260100160);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009816);
+    SetSpeffect(10000, 260100170);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009817);
+    SetSpeffect(10000, 260100180);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009818);
+    SetSpeffect(10000, 260100210);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009819);
+    SetSpeffect(10000, 260100200);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009820);
+    SetSpeffect(10000, 260100220);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009821);
+    SetSpeffect(10000, 260100250);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009822);
+    SetSpeffect(10000, 260100230);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009823);
+    SetSpeffect(10000, 260100240);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009824);
+    SetSpeffect(10000, 260100190);
 });
 
 //----------------------------------------------
@@ -5659,4 +6084,3 @@ Event(20082200, Default, function() {
     
     EndUnconditionally(EventEndType.Restart);
 });
-
