@@ -5648,13 +5648,14 @@ Event(20082101, Default, function() {
 Event(20082200, Default, function() {
     // Disabled
     SkipIfEventFlag(2, ON, TargetEventFlagType.EventFlag, 25009512);
-    ChangeCharacterEnableState(4000865, Disabled);
-    SetCharacterAnimationState(4000865, Disabled);
+    SetEventFlag(25009513, OFF);
+    ForceAnimationPlayback(4000865, 700, false, false, true, 0, 1);
     
     // Enabled
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009512);
-    ChangeCharacterEnableState(4000865, Enabled);
-    SetCharacterAnimationState(4000865, Enabled);
+    SkipIfEventFlag(3, OFF, TargetEventFlagType.EventFlag, 25009512);
+    SkipIfEventFlag(2, ON, TargetEventFlagType.EventFlag, 25009513);
+    ForceAnimationPlayback(4000865, 20000, false, false, true, 0, 1);
+    SetEventFlag(25009513, ON);
     
     EndUnconditionally(EventEndType.Restart);
 });

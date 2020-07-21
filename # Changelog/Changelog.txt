@@ -21,8 +21,8 @@
 #------------------------------
 # Changelog
 #------------------------------
-Add reverse rush
 Add boss select
+Add progressive rush
 
 
 
@@ -56,6 +56,7 @@ Add boss select
 25009510 Boss Rush Active
 25009511 Disable Nexus Return
 25009512 El Hueso Active
+25009513 El Hueso anim
 
 # Boss Killed
 25001001 Corrupted Gundyr
@@ -140,3 +141,28 @@ Add boss select
 25009724 Saved Progress 24
 25009725 Saved Progress 25
 
+25009601 Progressive Progress 1
+25009602 Progressive Progress 2
+25009603 Progressive Progress 3
+25009604 Progressive Progress 4
+25009605 Progressive Progress 5 
+25009606 Progressive Progress 6
+25009607 Progressive Progress 7
+25009608 Progressive Progress 8 
+25009609 Progressive Progress 9
+25009610 Progressive Progress 10
+25009611 Progressive Progress 11
+25009612 Progressive Progress 12
+25009613 Progressive Progress 13
+25009614 Progressive Progress 14
+25009615 Progressive Progress 15 
+25009616 Progressive Progress 16
+25009617 Progressive Progress 17
+25009618 Progressive Progress 18
+25009619 Progressive Progress 19
+25009620 Progressive Progress 20
+25009621 Progressive Progress 21
+25009622 Progressive Progress 22
+25009623 Progressive Progress 23
+25009624 Progressive Progress 24
+25009625 Progressive Progress 25
