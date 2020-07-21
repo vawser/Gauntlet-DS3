@@ -24,6 +24,8 @@
 Add reverse rush
 Add boss select
 
+Halflight HP too high
+
 #------------------------------
 # ESD
 #------------------------------
@@ -51,6 +53,7 @@ Add boss select
 25009503 Random Rush - Warp
 
 25009510 Boss Rush Active
+25009511 Disable Nexus Return
 
 # Boss Killed
 25001001 Corrupted Gundyr
@@ -134,3 +137,4 @@ Add boss select
 25009723 Saved Progress 23
 25009724 Saved Progress 24
 25009725 Saved Progress 25
+

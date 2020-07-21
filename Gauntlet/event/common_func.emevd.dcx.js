@@ -3491,6 +3491,7 @@ Event(20005800, Restart, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, 
     IfPlayerIsNotInOwnWorldExcludesArena(AND_01, false);
     IfConditionGroup(MAIN, PASS, AND_01);
     GotoUnconditionally(Label.LABEL1);
+    
     Label0();
     GotoIfPlayerIsNotInOwnWorldExcludesArena(Label.LABEL3, true);
     IfPlayerIsNotInOwnWorldExcludesArena(AND_01, false);
@@ -3499,6 +3500,7 @@ Event(20005800, Restart, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, 
     IfConditionGroup(MAIN, PASS, AND_01);
     GotoIfPlayerIsNotInOwnWorldExcludesArena(Label.LABEL2, true);
     RotateCharacter(10000, X8_4, 60060, true);
+    
     Label3();
     GotoIfEventFlag(Label.LABEL1, ON, TargetEventFlagType.EventFlag, X12_4);
     IfPlayerIsNotInOwnWorldExcludesArena(AND_02, false);
@@ -3509,10 +3511,12 @@ Event(20005800, Restart, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, 
     IfConditionGroup(AND_02, PASS, OR_02);
     IfConditionGroup(MAIN, PASS, AND_02);
     EndIfConditionGroupStateCompiled(EventEndType.Restart, PASS, OR_03);
+    
     Label1();
     GotoIfPlayerIsNotInOwnWorldExcludesArena(Label.LABEL2, true);
     IssueBossRoomEntryNotification(0);
     SetNetworkUpdateAuthority(X20_4, AuthorityLevel.Forced);
+    
     Label2();
     ActivateMultiplayerdependantBuffs(X20_4);
     SetNetworkconnectedEventFlag(X12_4, ON);
@@ -5341,100 +5345,28 @@ Event(20081210, Default, function(X0_4, X4_4) {
 });
 
 //----------------------------------------------
-// Boss - Start State
+// Boss - Start State - Fire Once
 // <entity id>
 //----------------------------------------------
-Event(20082000, Default, function(X0_4) {
+Event(20082000, Default, function(X0_4, X4_4) {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, X4_4);
     
+    DisplayEpitaphMessage(98002001);
+    
+    SetEventFlag(25009511, ON); // Kill Nexus return script
     SetSpeffect(10000, 260300100); // Set In Bossfight
-    
-    // Boss Scaling
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009800);
-    SetSpeffect(X0_4, 260300000);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009801);
-    SetSpeffect(X0_4, 260300001);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009802);
-    SetSpeffect(X0_4, 260300002);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009803);
-    SetSpeffect(X0_4, 260300003);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009804);
-    SetSpeffect(X0_4, 260300004);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009805);
-    SetSpeffect(X0_4, 260300005);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009806);
-    SetSpeffect(X0_4, 260300006);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009807);
-    SetSpeffect(X0_4, 260300007);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009808);
-    SetSpeffect(X0_4, 260300008);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009809);
-    SetSpeffect(X0_4, 260300009);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009810);
-    SetSpeffect(X0_4, 260300010);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009811);
-    SetSpeffect(X0_4, 260300011);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009812);
-    SetSpeffect(X0_4, 260300012);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009813);
-    SetSpeffect(X0_4, 260300013);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009814);
-    SetSpeffect(X0_4, 260300014);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009815);
-    SetSpeffect(X0_4, 260300015);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009816);
-    SetSpeffect(X0_4, 260300016);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009817);
-    SetSpeffect(X0_4, 260300017);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009818);
-    SetSpeffect(X0_4, 260300018);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009819);
-    SetSpeffect(X0_4, 260300019);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009820);
-    SetSpeffect(X0_4, 260300020);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009821);
-    SetSpeffect(X0_4, 260300021);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009822);
-    SetSpeffect(X0_4, 260300022);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009823);
-    SetSpeffect(X0_4, 260300023);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009824);
-    SetSpeffect(X0_4, 260300024);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825);
-    SetSpeffect(X0_4, 260300024);
 });
 
 //----------------------------------------------
-// Boss - Start State (for adds)
+// Boss - Start State - Loop
 // <entity id>
 //----------------------------------------------
-Event(20082001, Default, function(X0_4) {
+Event(20082001, Default, function(X0_4, X4_4) {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    
+    // Skip application if boss fight isn't 'active'
+    GotoIfEventFlag(Label.LABEL0, OFF, TargetEventFlagType.EventFlag, X4_4);
     
     // Boss Scaling
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009800);
@@ -5514,6 +5446,9 @@ Event(20082001, Default, function(X0_4) {
     
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825);
     SetSpeffect(X0_4, 260300024);
+    
+    Label0();
+    EndUnconditionally(EventEndType.Restart);
 });
 
 //----------------------------------------------
@@ -5657,11 +5592,50 @@ Event(20082010, Default, function(X0_4, X4_4, X8_4) {
     SetEventFlag(25009801, ON);
     SetEventFlag(25009701, ON);
     
-    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009825); // Return to Nexus if last boss
-    WarpPlayer(40, 0, 4000970); // Return to Nexus
-    SkipIfEventFlag(4, ON, TargetEventFlagType.EventFlag, 25009825); // Skip boss rush advancement if last boss 
+    // Skip boss rush advancement if last boss
+    SkipIfEventFlag(4, ON, TargetEventFlagType.EventFlag, 25009825); 
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009500); // Boss Rush - Standard
     SetSpeffect(10000, X8_4); // Next Boss
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009502); // Boss Rush - Random
     SetSpeffect(10000, 260100300); // Random
+    
+    // Return to Nexus if last boss in progression
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 25009825); 
+    WarpPlayer(40, 0, 4000970); // Return to Nexus
 });
+
+//----------------------------------------------
+// Boss Rush - Standard
+//----------------------------------------------
+Event(20082100, Default, function() {
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, 25009501);
+
+    // Clear boss progress
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009800, ON); // Start progress flag
+    
+    SetEventFlag(25009501, OFF); // Warp
+    SetEventFlag(25009500, ON); // Standard
+    SetEventFlag(25009510, ON); // Active
+    
+    //SetSpeffect(10000, 260100010); // Corrupted Gundyr
+    SetSpeffect(10000, 260100190); // Debug
+});
+
+//----------------------------------------------
+// Boss Rush - Random
+//----------------------------------------------
+Event(20082101, Default, function() {
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, 25009503);
+
+    // Clear boss progress
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    SetEventFlag(25009800, ON); // Start progress flag
+    
+    SetEventFlag(25009503, OFF); // Warp
+    SetEventFlag(25009502, ON); // Random
+    SetEventFlag(25009510, ON); // Active
+    
+    SetSpeffect(10000, 260100300); // Random
+});
+

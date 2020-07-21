@@ -2889,7 +2889,7 @@ Event(4008150, Default, function() {
     SetEventFlag(13200445, OFF);
     SetEventFlag(13200446, OFF);
     
-    SetMapCeremony(32, 0, 0);
+    //SetMapCeremony(32, 0, 0);
     
     // Warp Player
     //SetPlayerRespawnPoint(3202950);
@@ -2913,22 +2913,22 @@ Event(4008160, Default, function() {
     SetEventFlag(9304, OFF);
     SetEventFlag(6304, OFF);
     
-    //SetEventFlag(13200440, OFF);
-    //SetEventFlag(13200445, OFF);
-    //SetEventFlag(13200855, OFF);
-    //SetEventFlag(13200856, OFF);
-    //SetEventFlag(13200862, OFF);
+    SetEventFlag(13200440, OFF);
+    SetEventFlag(13200445, OFF);
+    SetEventFlag(13200855, OFF);
+    SetEventFlag(13200856, OFF);
+    SetEventFlag(13200862, OFF);
     
-    SetEventFlag(13200440, ON);
-    SetEventFlag(13200445, ON);
-    SetEventFlag(13200446, ON);
+    //SetEventFlag(13200440, ON);
+    //SetEventFlag(13200445, ON);
+    //SetEventFlag(13200446, ON);
     
-    SetMapCeremony(32, 0, 10);
+    //SetMapCeremony(32, 0, 10);
     
-    DeactivateObject(3203850, Enabled);
-    DeactivateObject(3203851, Enabled);
-    DeactivateObject(3203852, Enabled);
-    DeactivateObject(3203853, Enabled);
+    //DeactivateObject(3203850, Enabled);
+    //DeactivateObject(3203851, Enabled);
+    //DeactivateObject(3203852, Enabled);
+    //DeactivateObject(3203853, Enabled);
     
     // Warp Player
     //SetPlayerRespawnPoint(3202952);
@@ -3271,12 +3271,12 @@ Event(4009000, Default, function() {
 
 // Boss Rush - Random Boss - Final Boss
 Event(4009001, Default, function() {
-    IfEventValue(MAIN, 25009900, 32, ComparisonType.GreaterOrEqual, 25);
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, 25009825);
     
     SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
-    
+
     SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
 });
@@ -3291,29 +3291,26 @@ Event(4009002, Default, function() {
     
     SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
-    
 });
 
 // Boss Rush - Pre-boss Monitor
 Event(4009003, Default, function() {
     EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 25009510);
     
+    SetEventFlag(25009511, OFF);
+    
     DisplayEpitaphMessage(98002000);
     
     WaitFixedTimeSeconds(60);
     
-    // If in Boss fight, just end event
-    IfCharacterHasSpeffect(AND_01, 10000, 260300100, true, ComparisonType.Equal, 1);
-    GotoIfConditionGroupStateUncompiled(Label.LABEL1, PASS, AND_01);
-    
+    // Skip return if boss has been awoken
+    SkipIfEventFlag(5, ON, TargetEventFlagType.EventFlag, 25009511);
     SetEventFlag(25009500, OFF); // Standard
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009510, OFF); // Active
-    
     SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
 
-    Label1();
     EndUnconditionally(EventEndType.End);
 });
 
