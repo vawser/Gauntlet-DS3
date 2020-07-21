@@ -24,7 +24,7 @@
 Add reverse rush
 Add boss select
 
-Halflight HP too high
+4000865
 
 #------------------------------
 # ESD
@@ -32,7 +32,8 @@ Halflight HP too high
 400001 - The Nexus
 400505 - Princeling Ricardo - Utility
 400504 - Magnum Ursus - Item Shop
-400006 - Matilda the Accursed - Afflictions
+400506 - Lord Zakar - Utility
+400006 - Matilda the Accursed - Curses
 
 #------------------------------
 # Flags
@@ -54,6 +55,7 @@ Halflight HP too high
 
 25009510 Boss Rush Active
 25009511 Disable Nexus Return
+25009512 El Hueso Active
 
 # Boss Killed
 25001001 Corrupted Gundyr

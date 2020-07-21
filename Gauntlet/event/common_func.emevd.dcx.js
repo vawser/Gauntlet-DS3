@@ -5337,9 +5337,12 @@ Event(20081210, Default, function(X0_4, X4_4) {
     IfCharacterDamagedBy(AND_01, X4_4, 10000);
     IfConditionGroup(MAIN, PASS, AND_01);
     
-    SetCharacterTeamType(X4_4, TeamType.StrongEnemy);
-    WaitFixedTimeFrames(1);
-    RequestCharacterAIReplan(X4_4);
+    SpawnOneshotSFX(TargetEntityType.Character, X4_4, 280, 1060);
+    ChangeCharacterEnableState(X4_4, Disabled);
+    SetCharacterAIState(X4_4, Disabled);
+    //SetCharacterTeamType(X4_4, TeamType.StrongEnemy);
+    //WaitFixedTimeFrames(1);
+    //RequestCharacterAIReplan(X4_4);
     
     EndUnconditionally(EventEndType.Restart);
 });
@@ -5637,5 +5640,22 @@ Event(20082101, Default, function() {
     SetEventFlag(25009510, ON); // Active
     
     SetSpeffect(10000, 260100300); // Random
+});
+
+//----------------------------------------------
+// El Hueso - State
+//----------------------------------------------
+Event(20082200, Default, function() {
+    // Disabled
+    SkipIfEventFlag(2, ON, TargetEventFlagType.EventFlag, 25009512);
+    ChangeCharacterEnableState(4000865, Disabled);
+    SetCharacterAnimationState(4000865, Disabled);
+    
+    // Enabled
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 25009512);
+    ChangeCharacterEnableState(4000865, Enabled);
+    SetCharacterAnimationState(4000865, Enabled);
+    
+    EndUnconditionally(EventEndType.Restart);
 });
 
