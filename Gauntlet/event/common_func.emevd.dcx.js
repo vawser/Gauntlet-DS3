@@ -5621,8 +5621,8 @@ Event(20082100, Default, function() {
     SetEventFlag(25009500, ON); // Standard
     SetEventFlag(25009510, ON); // Active
     
-    //SetSpeffect(10000, 260100010); // Corrupted Gundyr
-    SetSpeffect(10000, 260100190); // Debug
+    SetSpeffect(10000, 260100010); // Corrupted Gundyr
+    //SetSpeffect(10000, 260100190); // Debug
 });
 
 //----------------------------------------------

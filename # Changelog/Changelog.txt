@@ -24,7 +24,7 @@
 Add reverse rush
 Add boss select
 
-4000865
+
 
 #------------------------------
 # ESD
