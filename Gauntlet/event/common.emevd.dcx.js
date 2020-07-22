@@ -3277,7 +3277,9 @@ Event(4009001, Default, function() {
     SetEventFlag(25009502, OFF); // Random
     SetEventFlag(25009504, OFF); // Progressive
     SetEventFlag(25009510, OFF); // Active
-
+    
+    BatchSetEventFlags(25009800, 25009825, OFF);
+    
     SetMapCeremony(40, 0, 0);
     WarpPlayer(40, 0, 4000970);
 });
