@@ -4880,7 +4880,7 @@ Event(20009201, Default, function(X0_4, X4_4) {
 });
 
 //----------------------------------------------
-// Setup Game Flags
+// Game Flags
 //----------------------------------------------
 Event(20009300, Default, function() {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
